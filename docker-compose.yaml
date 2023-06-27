@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+    frontend:
+        build:
+            context: ./docker/front
+            dockerfile: Dockerfile
+        container_name: front
+        ports:
+            - "88:80"
+        volumes:
+            - ./Frontend:/project
+
+    backend:
+        build:
+            context: ./docker/back
+            dockerfile: Dockerfile
+        container_name: back
+        ports:
+            - "80:80"
+        volumes:
+            - ./Backend:/var/www/html
+
+    db:
+        build:
+            context: ./docker/db
+            dockerfile: Dockerfile            
+        environment:
+            - MYSQL_DATABASE=data
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_ROOT_USERNAME=root
+        volumes:
+            - ./Database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+        container_name: database
+
+
+    myadmin:
+        image: phpmyadmin:latest
+        environment:
+            UPLOAD_LIMIT: 524288000
+        ports:
+            - "8081:80"
+        container_name: myadmin
+
+
+volumes:
+    postgres15:
