@@ -5,7 +5,7 @@ CREATE TABLE `sensor`(
     `type_id` INT UNSIGNED NOT NULL,
     `value` INT NOT NULL,
     `margin` INT NULL,
-    `short_lived` BOOLEAN NULL
+    `short_lived` BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 CREATE TABLE `room_type`(
