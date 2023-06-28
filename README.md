@@ -26,3 +26,5 @@
 1. Make sure you are in the `Frontend` folder
 2. run `npm run test` to run the tests
 
+test
+
