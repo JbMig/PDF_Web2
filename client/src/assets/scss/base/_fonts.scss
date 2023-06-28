@@ -1,0 +1,26 @@
+@include font-face(
+  "Satoshi-Bold",
+  "./assets/fonts/Satoshi-Bold/Satoshi-Bold",
+  700,
+  null,
+  eot woff2 woff ttf
+);
+$Satoshi-Bold: "Satoshi-Bold", "Arial", sans-serif;
+
+@include font-face(
+  "Satoshi-Medium",
+  "./assets/fonts/Satoshi-Medium/Satoshi-Medium",
+  500,
+  null,
+  eot woff2 woff ttf
+);
+$Satoshi-Medium: "Satoshi-Medium", "Arial", sans-serif;
+
+@include font-face(
+  "Satoshi-Regular",
+  "./assets/fonts/Satoshi-Regular/Satoshi-Regular",
+  400,
+  null,
+  eot woff2 woff ttf
+);
+$Satoshi-Regular: "Satoshi-Regular", "Arial", sans-serif;

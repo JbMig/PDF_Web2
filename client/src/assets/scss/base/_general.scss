@@ -1,0 +1,15 @@
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: $Satoshi-Regular;
+}
