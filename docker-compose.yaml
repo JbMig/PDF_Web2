@@ -11,27 +11,28 @@ services:
         volumes:
             - ./Frontend:/project
 
-    backend:
+    back:
         build:
             context: ./docker/back
             dockerfile: Dockerfile
         container_name: back
         ports:
-            - "80:80"
+            - '4557:80'
+        restart: unless-stopped
         volumes:
-            - ./Backend:/var/www/html
+            - ./app:/var/www/html
 
     db:
-        build:
-            context: ./docker/db
-            dockerfile: Dockerfile            
+        image: 'mariadb'
+        container_name: db
+        ports:
+            - '3307'
+        restart: always
         environment:
-            - MYSQL_DATABASE=data
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_ROOT_USERNAME=root
+            MYSQL_DATABASE: data
+            MYSQL_ROOT_PASSWORD: root
         volumes:
             - ./Database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
-        container_name: database
 
 
     myadmin:
