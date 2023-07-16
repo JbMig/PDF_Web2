@@ -200,4 +200,45 @@ class BuildingController extends AbstractController
         }
 
     }
+
+    #[Route('/building/{id}/add_user', name: 'add_user', methods: ['POST'])]
+    public function addUser(EntityManagerInterface $entityManager, int $id): Response
+    {
+        $building_repository = $entityManager->getRepository(Buildings::class);
+        $building = $building_repository->find($id);
+
+        return new JsonResponse([
+            'building'=>$building,
+            'response' => 'success'
+        ]);
+    }
+
+    // TODO mettre en place la table de relation user building + gerer admin
+    // TODO la table sera building_id, user_id, admin (bool)
+    // TODO gérer l'affichage des pièce par rapport au user_id dans la table user_building
+    #[Route('/building/{id}/new_user', name: 'new_user', methods: ['POST'])]
+    public function newUser(EntityManagerInterface $entityManager, int $id, Request $request): Response
+    {
+        $formData = json_decode($request->getContent(), true);
+        $user_building = new UserBuilding();
+
+        if (isset($formData['user'])) {
+            $user_repository = $entityManager->getRepository(Users::class);
+            $user = $user_repository->findBy(array("mail" => $formData['mail']));
+
+            $user_building->setUserId($user->getId());
+            $user_building ->setBuilldingId($id);
+
+            $entityManager->persist($user_building );
+            $entityManager->flush();
+            return new JsonResponse([
+                'response' => 'success'
+            ]);
+        } else {
+            return new JsonResponse([
+                'response' => 'error'
+            ]);
+        }
+
+    }
 }
