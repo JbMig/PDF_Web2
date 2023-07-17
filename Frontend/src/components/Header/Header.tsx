@@ -18,42 +18,23 @@ export default function Header() {
     let balise;
 
 	balise = 
-	<div className="flex bg-background px-base py-xl">
-		<div className="flex-1"> 
-			<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-		</div>
-		<div className="">
-			<Button props={bellButton}/>
-			<Profile props={profile_picture}/>
-		</div>
-	</div>
-	
-	// Valentine
-	// <div className="h-120px bg-background drop-shadow-lg flex">
-	// 			<div className="header-content w-full flex-row justify-between self-center flex">
-	// 				<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-	// 				<div className="space-x-xxl flex-row self-center">
-	// 					<Button props={bellButton}/>
-	// 					<Button props={profileButton}/>
-	// 				</div>
-	// 			</div>
-	// 		</div>
+			<div className="flex bg-background px-base py-xl">
+				<div className="flex-1"> 
+					<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
+				</div>
+				<div className="flex space-x-xxl">
+					<div className="self-center">
+						<Button props={bellButton} />
+					</div>
+					<div className="self-center">
+						<Profile props={profile_picture}/>
+					</div>
+				</div>
+			</div>
 
-{/* 
-Moi test
-	<div className=" min-h-120px bg-background drop-shadow-lg flex justify-betweenn p-x-base p-y-xl">
-		<div>
-			<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-		</div>
-		<div className="flex-row self-center">
-			<Button props={bellButton}/>
-			<Profile props={profile_picture}/>
-		</div>
-	</div>
- */}
 	return (
-		<>
+		<Fragment>
 			{balise}
-		</>
+		</Fragment>
 	);
 }

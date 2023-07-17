@@ -30,12 +30,14 @@ module.exports = {
       normal : '500',
       bold: '700',
     },
+    // text
     fontSize: {
 			'base': '1rem',
 			'medium': '1.25rem',
 			'big': '40px',
 			'title': '48px',
 		},
+    // font
     fontFamily: {
       'satoshi': ['Satoshi-Regular', 'Satoshi-Bold', 'Satoshi-Medium'],
       'sans' : ['sans-serif']
