@@ -1,31 +1,39 @@
 import React, { Fragment } from "react";
 import Button from "../components/Button";
-import { ButtonInterface, LabelInterface, ProfileInterface } from '../interfaces/interfaces'
+import { ButtonInterface, LabelInterface, ProfileInterface, SubHeaderInterface } from '../interfaces/interfaces'
 import Label from "../components/Label";
 import Profile from "../components/Profile";
 import SideBarPopup from "../components/popups/SidebarPopup";
-import { Header } from "../components";
+import { Header, SubHeader } from "../components";
 
 
 export default function Home() {
-    let balise;
+    const subHeaderProps : SubHeaderInterface = 
+	{
+		doWeShowSettingsButton : true,
+		text_settings : 'Paramètres généraux',
+		text_add : 'Ajouter bâtiment',
+		text_title : 'Mes bâtiments',
+	};
+	
+	let balise;
       
     balise = 
 	<section className="bg-background px-base">
-		<Header></Header>
-		<h1 className="text-big font-sans font-bold text-white">Mes bâtiments</h1>
+		<Header />
+		<SubHeader props={subHeaderProps}/>
 	</section>;
 	
 
 	// tests Sandie
-	const buttonPlein : ButtonInterface = {
-		text: 'Satoshi',
-		style: 'fill',
-	}
-	const buttonVide : ButtonInterface = {
-		text: 'abcdef',
-		style: 'outline',
-	}
+	// const buttonPlein : ButtonInterface = {
+	// 	text: 'Satoshi',
+	// 	style: 'fill',
+	// }
+	// const buttonVide : ButtonInterface = {
+	// 	text: 'abcdef',
+	// 	style: 'outline',
+	// }
 //   const test : LabelInterface = {
 //     	text: 'label',
 //     	style: 'outline',
