@@ -10,7 +10,7 @@ export default function Header() {
 		style: 'outline',
 	}
 
-	const profile_picture : ProfileInterface = {
+	const profilePicture : ProfileInterface = {
 		size: 'small',
 		picture_link: undefined
 	}
@@ -18,42 +18,19 @@ export default function Header() {
     let balise;
 
 	balise = 
-	<div className="flex bg-background px-base py-xl">
+	<div className="flex bg-background py-lg">
 		<div className="flex-1"> 
 			<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
 		</div>
-		<div className="">
+		<div className="space-x-xxl flex-row self-center flex">
 			<Button props={bellButton}/>
-			<Profile props={profile_picture}/>
+			<Profile props={profilePicture}/>
 		</div>
-	</div>
-	
-	// Valentine
-	// <div className="h-120px bg-background drop-shadow-lg flex">
-	// 			<div className="header-content w-full flex-row justify-between self-center flex">
-	// 				<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-	// 				<div className="space-x-xxl flex-row self-center">
-	// 					<Button props={bellButton}/>
-	// 					<Button props={profileButton}/>
-	// 				</div>
-	// 			</div>
-	// 		</div>
+	</div>;
 
-{/* 
-Moi test
-	<div className=" min-h-120px bg-background drop-shadow-lg flex justify-betweenn p-x-base p-y-xl">
-		<div>
-			<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-		</div>
-		<div className="flex-row self-center">
-			<Button props={bellButton}/>
-			<Profile props={profile_picture}/>
-		</div>
-	</div>
- */}
 	return (
-		<>
+		<Fragment>
 			{balise}
-		</>
+		</Fragment>
 	);
 }
