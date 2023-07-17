@@ -24,7 +24,7 @@ module.exports = {
 		fontSize: {
 			'base': '1rem',
 			'medium': '1.25rem',
-			'big': '1.5rem',
+			'big': '40px',
 			'title': '48px',
 		},
 		fontFamily: {
