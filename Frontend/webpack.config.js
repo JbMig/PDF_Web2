@@ -51,6 +51,10 @@ module.exports = (env, options) => {
             { loader: "sass-loader", options: { sourceMap: true } },
           ],
         },
+        {
+          test: /\.?(png|jpg|svg)$/,
+          type: "asset",
+        },
       ],
     },
 
