@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Home, NoMatch } from "./pages";
-import { Nav } from "./components";
+import { Home, Login, NoMatch, Register } from "pages";
+import { Nav } from "components";
 
 export default function App() {
   return (
@@ -10,6 +10,8 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="*" element={<NoMatch />} />
       </Route>
+      <Route path={"/login"} element={<Login />} />
+      <Route path={"/register"} element={<Register />} />
     </Routes>
   );
 }
