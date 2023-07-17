@@ -4,8 +4,25 @@ import { ButtonInterface, LabelInterface, ProfileInterface } from '../interfaces
 import Label from "../components/Label";
 import Profile from "../components/Profile";
 import SideBarPopup from "../components/popups/SidebarPopup";
+import { Header } from "../components";
+
 
 export default function Home() {
+    // const bellButton : ButtonInterface = {
+    // 	text: 'Notifs',
+    // 	style: 'outline',
+    // }
+    // const profileButton : ButtonInterface = {
+    // 	text: 'Profil',
+    // 	style: 'fill',
+    // }
+    //   let balise;
+      
+    // balise = <body className="bg-background_grey px-xxxl">
+    // 			<Header></Header>
+    // 			<h1 className="text-big font-sans font-bold text-white">Mes bâtiments</h1>
+    // 		</body>;
+	
 
   const buttonPlein : ButtonInterface = {
     text: 'Satoshi',
@@ -28,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home</h1>
+      <Header></Header>
       <SideBarPopup />
       <Button props={buttonPlein}/>
       <Button props={buttonVide}/>

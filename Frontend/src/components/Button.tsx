@@ -2,19 +2,11 @@ import React from 'react';
 import { ButtonInterface } from '../interfaces/interfaces'
 
 export default function Button({props} : {props : ButtonInterface}) {
-    // {text, style, color, icon}:{text: string, style: string, color:string, icon?: string}
+
     function buttonContent(){
-        // if(props.icon == undefined){
             return props.text
-        // } else {
-        //     return (
-        //         <>
-        //             <img className="pr-2" src={props.icon} alt="icon button" />
-        //             {props.text}
-        //         </>
-        //     )
-        // }
     }
+
     let balise;
 
     if(props.style=="fill"){
@@ -38,11 +30,6 @@ export default function Button({props} : {props : ButtonInterface}) {
         </button>
     } 
     
-    // else if(props.style=="undefined"){
-    //     balise = <button className={"btn btn-secondary text-neutral-600 font-os text-paragraph"} >
-    //         {buttonContent()}
-    //     </button>
-    // }
     return (
         <>
             {balise}      

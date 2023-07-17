@@ -21,25 +21,27 @@ module.exports = {
       xl: '32px',
       xxl: '40px',
       sm_profile : "56px",
+      base : '80px',
       lg_profile:'96px',
       
       sidebar: "320px"
     },
-    // font
     fontWeight: {
       normal : '500',
       bold: '700',
     },
-    // text
     fontSize: {
-      base: '1rem',
-      md: '1.25rem',
-      lg: '1.5rem',
-      title: '3rem',
-    },
+			'base': '1rem',
+			'medium': '1.25rem',
+			'big': '40px',
+			'title': '48px',
+		},
     fontFamily: {
       'satoshi': ['Satoshi-Regular', 'Satoshi-Bold', 'Satoshi-Medium'],
       'sans' : ['sans-serif']
-    }
+    },
+    dropShadow: {
+			lg: '0px 0px 32px 0px rgba(0, 0, 0, 0.25)',
+		}
   }
 };
