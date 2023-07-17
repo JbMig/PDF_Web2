@@ -5,29 +5,21 @@ import Label from "../components/Label";
 import Profile from "../components/Profile";
 import SideBarPopup from "../components/popups/SidebarPopup";
 import { Header, SubHeader } from "../components";
-import "../components/Nav/Nav.scss";
-import { Link, Outlet } from "react-router-dom";
 
-export default function Home() {
+
+export default function Building() {
     const subHeaderProps : SubHeaderInterface = 
 	{
-		doWeShowSettingsButton : true,
-		text_settings : 'Paramètres généraux',
-		text_add : 'Ajouter bâtiment',
-		text_title : 'Mes bâtiments',
+		doWeShowSettingsButton : false,
+		text_settings : '',
+		text_add : 'Ajouter pièce',
+		text_title : 'Nom du bâtiment',
 	};
 	
 	let balise;
       
     balise = 
 	<section className="bg-background px-base">
-		<nav>
-			<ul>
-				<li>
-					<Link to="/Building" className="font-sans font-bold text-white">Test page Bâtiment</Link>
-				</li>
-			</ul>
-		</nav>
 		<Header />
 		<SubHeader props={subHeaderProps}/>
 	</section>;
