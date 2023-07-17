@@ -1,30 +1,38 @@
-import React, { Fragment } from "react";
-import { Button } from "components";
-import { ButtonInterface } from "interfaces";
+import React from "react";
+import { Button, Profile } from "components";
+import { ButtonInterface, ProfileInterface } from "interfaces";
+import { Link } from "react-router-dom";
 
 // Le lien vers home ici va devenir inutile, à condition d'inclure le header partout.
 export default function Nav() {
   const bellButton: ButtonInterface = {
     text: "Notifs",
     style: "outline",
-    icon: undefined,
   };
-  const profileButton: ButtonInterface = {
-    text: "Profil",
-    style: "fill",
-    icon: undefined,
+
+  const profilePicture: ProfileInterface = {
+    size: "small",
+    picture_link: undefined,
   };
+
   let balise;
+
   balise = (
-    <nav className="flex h-[120px] w-full items-center justify-between bg-background_grey px-xxxl drop-shadow-lg">
-      <h2 className="text-white font-satoshi text-title font-bold hover:text-text_yellow">
-        Nom de l'appli
-      </h2>
-      <div className="space-x-xxl">
-        <Button props={bellButton} />
-        <Button props={profileButton} />
+    <div className="flex bg-background py-lg">
+      <div className="flex-1">
+        <Link
+          to="/"
+          className="text-white self-center font-satoshi text-title font-bold hover:text-text_yellow"
+        >
+          Nom de l'appli
+        </Link>
       </div>
-    </nav>
+      <div className="flex flex-row space-x-xxl self-center">
+        <Button props={bellButton} />
+        <Profile props={profilePicture} />
+      </div>
+    </div>
   );
-  return <Fragment>{balise}</Fragment>;
+
+  return <>{balise}</>;
 }
