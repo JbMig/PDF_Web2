@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 // const BundleAnalyzerPlugin =
 //   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
@@ -86,6 +87,11 @@ module.exports = (env, options) => {
 
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
+      plugins: [
+        new TsconfigPathsPlugin({
+          configFile: path.resolve(__dirname, "tsconfig.json"),
+        }),
+      ],
     },
   };
 };
