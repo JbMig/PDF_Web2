@@ -1,9 +1,25 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Button from "../components/Buttons/Button";
+import { ButtonInterface } from '../interfaces/interfaces'
+
 
 export default function Home() {
-  return (
-    <Fragment>
-      <h1>Vous êtes sur la home page.</h1>
-    </Fragment>
+	const buttonPlein : ButtonInterface = {
+			text: 'coucouuuuuu',
+			style: 'fill',
+			icon: undefined
+	}
+	const buttonVide : ButtonInterface = {
+		text: 'ss',
+		style: 'outline',
+		icon: undefined
+	}
+
+  	return (
+		<>
+			<h1>Vous êtes sur la home page.</h1>
+			<Button props={buttonPlein}/>
+			<Button props={buttonVide}/>
+		</>
   );
 }
