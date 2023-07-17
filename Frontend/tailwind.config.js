@@ -2,13 +2,7 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   plugins: [require("daisyui")],
   theme: {
-    extend: {
-      fontFamily: {
-        satoshi: ["satoshi"],
-      },
-    },
     colors: {
-      'white' : '#FFFFFF',
       'yellow' : '#FFF37A',
       'text_yellow' : '#FFEB82',
       'border_yellow' : '#BDB242',
@@ -25,9 +19,12 @@ module.exports = {
     fontSize: {
       'base': '1rem',
       'medium': '1.25rem',
-      'big': '1.5rem',
+      'big': '40px',
       'title': '48px',
     },
+	  fontFamily: {
+		  satoshi: ["satoshi"],
+	  },
     dropShadow: {
       lg: '0px 0px 32px 0px rgba(0, 0, 0, 0.25)',
     }
