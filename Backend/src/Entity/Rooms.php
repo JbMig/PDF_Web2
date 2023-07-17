@@ -21,19 +21,23 @@ class Rooms
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\ManyToMany(targetEntity: Buildings::class, inversedBy: 'rooms')]
-    private Collection $building_id;
-
     #[ORM\ManyToMany(targetEntity: Sensors::class, mappedBy: 'room_id')]
     private Collection $sensors;
 
     #[ORM\ManyToMany(targetEntity: RoomTypes::class, mappedBy: 'room_type_id')]
     private Collection $room_type;
 
+    #[ORM\OneToMany(mappedBy: 'room_id', targetEntity: Sensors::class)]
+    private Collection $sensors_id;
+
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Buildings $building_id = null;
+
     public function __construct()
     {
-        $this->building_id = new ArrayCollection();
         $this->sensors = new ArrayCollection();
+        $this->sensors_id = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -64,30 +68,7 @@ class Rooms
 
         return $this;
     }
-
-    /**
-     * @return Collection<int, Buildings>
-     */
-    public function getBuildingId(): Collection
-    {
-        return $this->building_id;
-    }
-
-    public function addBuildingId(Buildings $buildingId): static
-    {
-        if (!$this->building_id->contains($buildingId)) {
-            $this->building_id->add($buildingId);
-        }
-
-        return $this;
-    }
-
-    public function removeBuildingId(Buildings $buildingId): static
-    {
-        $this->building_id->removeElement($buildingId);
-
-        return $this;
-    }
+    
 
     /**
      * @return Collection<int, Sensors>
@@ -136,6 +117,48 @@ class Rooms
         if ($this->room_type->removeElement($room_type)) {
             $room_type->removeRoomId($this);
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Sensors>
+     */
+    public function getSensorsId(): Collection
+    {
+        return $this->sensors_id;
+    }
+
+    public function addSensorsId(Sensors $sensorsId): static
+    {
+        if (!$this->sensors_id->contains($sensorsId)) {
+            $this->sensors_id->add($sensorsId);
+            $sensorsId->setRoomId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSensorsId(Sensors $sensorsId): static
+    {
+        if ($this->sensors_id->removeElement($sensorsId)) {
+            // set the owning side to null (unless already changed)
+            if ($sensorsId->getRoomId() === $this) {
+                $sensorsId->setRoomId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getBuildingId(): ?Buildings
+    {
+        return $this->building_id;
+    }
+
+    public function setBuildingId(Buildings $building_id): static
+    {
+        $this->building_id = $building_id;
 
         return $this;
     }

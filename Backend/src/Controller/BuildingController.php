@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BuildingController extends AbstractController
 {
-    #[Route('/building', name: 'index')]
+    #[Route('/building', name: 'building_index')]
     public function index(EntityManagerInterface $entityManager, Security $security): Response
     {
         $repository = $entityManager->getRepository(Buildings::class);
@@ -38,7 +38,7 @@ class BuildingController extends AbstractController
         }
     }
 
-    #[Route('/building/{id}', name: 'show')]
+    #[Route('/building/{id}', name: 'building_show')]
     public function show(EntityManagerInterface $entityManager, Security $security, int $id): Response
     {
         $user = $security->getUser();
@@ -213,9 +213,6 @@ class BuildingController extends AbstractController
         ]);
     }
 
-    // TODO mettre en place la table de relation user building + gerer admin
-    // TODO la table sera building_id, user_id, admin (bool)
-    // TODO gérer l'affichage des pièce par rapport au user_id dans la table user_building
     #[Route('/building/{id}/new_user', name: 'new_user', methods: ['POST'])]
     public function newUser(EntityManagerInterface $entityManager, int $id, Request $request): Response
     {
