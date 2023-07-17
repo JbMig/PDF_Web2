@@ -21,7 +21,7 @@ export default function Button({props} : {props : ButtonInterface}) {
         balise = <button className="
         btn rounded-xl py-sm px-lg 
         bg-text_yellow hover:bg-text_yellow
-        text-moyen font-bold uppercase 
+        text-medium font-bold uppercase 
         border-solid border-2 border-border_yellow ">
             {buttonContent()}
         </button>
@@ -31,7 +31,7 @@ export default function Button({props} : {props : ButtonInterface}) {
         balise = <button className="
         btn rounded-xl py-sm px-lg
         bg-transparent hover:bg-transparent 
-        text-moyen font-bold uppercase text-yellow
+        text-medium font-bold uppercase text-yellow
         border-solid border-2 border-yellow
         ">
             {buttonContent()}

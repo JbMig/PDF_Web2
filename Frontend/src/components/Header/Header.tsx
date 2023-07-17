@@ -1,18 +1,32 @@
 import React, { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
+import Button from "../Buttons/Button";
+import { ButtonInterface } from '../../interfaces/interfaces'
 
 export default function Header() {
-  return (
-    <Fragment>
-      <div className="header">
-		<div className="header-content">
-			<h2 className="white-title">Nom de l'appli</h2>
-			<div className="header-right-side">
-				<div className="white-title">Notifs</div>
-				<div className="white-title profile-button">Profil</div>
+	const bellButton : ButtonInterface = {
+		text: 'Notifs',
+		style: 'outline',
+		icon: undefined 
+	}
+	const profileButton : ButtonInterface = {
+		text: 'Profil',
+		style: 'fill',
+		icon: undefined 
+	}
+    let balise;
+	balise = <div className="h-120px bg-background_grey drop-shadow-lg flex">
+				<div className="header-content w-full mx-xxxl flex-row justify-between self-center flex">
+					<h2 className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</h2>
+					<div className="space-x-xxl flex-row self-center">
+						<Button props={bellButton}/>
+						<Button props={profileButton}/>
+					</div>
+				</div>
 			</div>
-		</div>
-	  </div>
-    </Fragment>
-  );
+	return (
+		<Fragment>
+			{balise}
+		</Fragment>
+	);
 }
