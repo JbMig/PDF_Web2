@@ -1,18 +1,24 @@
-import React, { Fragment } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React from "react";
+import "./Header.scss";
 
 export default function Header() {
   return (
-    <Fragment>
+    <>
       <div className="header">
-		<div className="header-content">
-			<h2 className="white-title">Nom de l'appli</h2>
-			<div className="header-right-side">
-				<div className="white-title">Notifs</div>
-				<div className="white-title profile-button">Profil</div>
-			</div>
-		</div>
-	  </div>
-    </Fragment>
+        <div className="header-content">
+          <h2 className="font-satoshi text-[48px] font-bold text-white">
+            Nom de l'appli
+          </h2>
+          <div className="header-right-side">
+            <div className="font-satoshi text-[48px] font-bold text-white">
+              Notifs
+            </div>
+            <div className="profile-button font-satoshi text-[48px] font-bold text-white">
+              Profil
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
