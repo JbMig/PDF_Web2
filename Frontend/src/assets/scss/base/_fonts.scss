@@ -1,26 +1,23 @@
 @include font-face(
-  "Satoshi-Bold",
+  "satoshi",
   "./assets/fonts/Satoshi-Bold/Satoshi-Bold",
   700,
   null,
   eot woff2 woff ttf
 );
-$Satoshi-Bold: "Satoshi-Bold", "Arial", sans-serif;
-
 @include font-face(
-  "Satoshi-Medium",
+  "satoshi",
   "./assets/fonts/Satoshi-Medium/Satoshi-Medium",
   500,
   null,
   eot woff2 woff ttf
 );
-$Satoshi-Medium: "Satoshi-Medium", "Arial", sans-serif;
-
 @include font-face(
-  "Satoshi-Regular",
+  "satoshi",
   "./assets/fonts/Satoshi-Regular/Satoshi-Regular",
   400,
   null,
   eot woff2 woff ttf
 );
-$Satoshi-Regular: "Satoshi-Regular", "Arial", sans-serif;
+
+$satoshi: "satoshi", sans-serif;
