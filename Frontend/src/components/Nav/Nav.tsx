@@ -16,15 +16,15 @@ export default function Nav() {
   };
   let balise;
   balise = (
-    <div className="flex h-[120px] w-full items-center justify-between bg-background_grey px-xxxl drop-shadow-lg">
-      <h2 className="font-satoshi text-title font-bold text-white hover:text-text_yellow">
+    <nav className="flex h-[120px] w-full items-center justify-between bg-background_grey px-xxxl drop-shadow-lg">
+      <h2 className="text-white font-satoshi text-title font-bold hover:text-text_yellow">
         Nom de l'appli
       </h2>
       <div className="space-x-xxl">
         <Button props={bellButton} />
         <Button props={profileButton} />
       </div>
-    </div>
+    </nav>
   );
   return <Fragment>{balise}</Fragment>;
 }

@@ -22,7 +22,7 @@
       "components/*": ["./components/*"],
       "fonts/*": ["./assets/fonts/*"],
       "images/*": ["./assets/images/*"],
-      "interfaces/*": ["./interfaces/*"],
+      "interfaces/*": ["./interfaces/*"]
     }
   },
   "include": ["src"],
