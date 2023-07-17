@@ -1,18 +1,18 @@
-.header {
+.nav {
   // width: 1440px;
   height: 120px;
   background: var(--background-grey, #242529);
   /* Header shadow */
   box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.25);
   display: flex;
-  .header-content {
+  .nav-content {
     width: 100%;
     margin: 0px 80px;
     align-self: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .header-right-side {
+    .nav-right-side {
       align-self: center;
       display: flex;
       flex-direction: row;

@@ -1,15 +1,15 @@
 import React from "react";
-import "./Header.scss";
+import "./Nav.scss";
 
-export default function Header() {
+export default function Nav() {
   return (
     <>
-      <div className="header">
-        <div className="header-content">
+      <nav className="nav">
+        <div className="nav-content">
           <h2 className="font-satoshi text-[48px] font-bold text-white">
             Nom de l'appli
           </h2>
-          <div className="header-right-side">
+          <div className="nav-right-side">
             <div className="font-satoshi text-[48px] font-bold text-white">
               Notifs
             </div>
@@ -18,7 +18,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
