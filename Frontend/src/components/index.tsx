@@ -1,8 +1,8 @@
-import RootLayout from "./RootLayout";
 import Nav from "./Nav/Nav";
 import Button from "./Button/Button";
-import Profile from "./Profile";
-import Label from "./Label";
+import Profile from "./Profile/Profile";
+import Label from "./Label/Label";
 import SideBarPopup from "./popups/SideBarPopup";
+import SubHeader from "./SubHeader/SubHeader";
 
-export { RootLayout, Nav, Button, Profile, Label, SideBarPopup };
+export { Nav, Button, Profile, Label, SideBarPopup, SubHeader };

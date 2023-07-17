@@ -18,16 +18,14 @@ export default function Nav() {
   let balise;
 
   balise = (
-    <div className="flex bg-background py-lg">
-      <div className="flex-1">
-        <Link
-          to="/"
-          className="text-white self-center font-satoshi text-title font-bold hover:text-text_yellow"
-        >
-          Nom de l'appli
-        </Link>
-      </div>
-      <div className="flex flex-row space-x-xxl self-center">
+    <div className="flex items-center justify-between bg-background px-base py-lg drop-shadow-lg">
+      <Link
+        to="/"
+        className="font-satoshi text-title font-bold text-white hover:text-text_yellow"
+      >
+        Nom de l'appli
+      </Link>
+      <div className="flex space-x-xxl">
         <Button props={bellButton} />
         <Profile props={profilePicture} />
       </div>

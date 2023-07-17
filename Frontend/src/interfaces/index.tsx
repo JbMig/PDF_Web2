@@ -14,9 +14,22 @@ interface ButtonInterface {
   style: string;
 }
 
+interface SubHeaderInterface {
+  doWeShowSettingsButton: boolean;
+  text_settings: string;
+  text_add: string;
+  text_title: string;
+}
+
 interface ProfileInterface {
   size: string;
   picture_link: string | undefined;
 }
 
-export type { State, ButtonInterface, LabelInterface, ProfileInterface };
+export type {
+  State,
+  ButtonInterface,
+  LabelInterface,
+  ProfileInterface,
+  SubHeaderInterface,
+};
