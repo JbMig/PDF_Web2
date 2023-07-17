@@ -1,7 +1,7 @@
 import React from 'react';
-import { ButtonInterface } from '../../interfaces/interfaces'
+import { LabelInterface } from '../interfaces/interfaces'
 
-export default function Button({props} : {props : ButtonInterface}) {
+export default function Label({props} : {props : LabelInterface}) {
     // {text, style, color, icon}:{text: string, style: string, color:string, icon?: string}
     function buttonContent(){
         // if(props.icon == undefined){
@@ -18,24 +18,24 @@ export default function Button({props} : {props : ButtonInterface}) {
     let balise;
 
     if(props.style=="fill"){
-        balise = <button className="
-        btn rounded-xl py-sm px-lg 
+        balise = <label htmlFor={props.label} className="
+        rounded-xl py-sm px-lg 
         bg-text_yellow hover:bg-text_yellow
-        text-moyen font-bold uppercase 
-        border-solid border-2 border-border_yellow ">
+        text-md font-bold
+        border-solid border-2 border-border_yellow hover:border-border_yellow">
             {buttonContent()}
-        </button>
+        </label>
     } 
 
     else if(props.style=="outline"){
-        balise = <button className="
-        btn rounded-xl py-sm px-lg
+        balise = <label htmlFor={props.label} className="
+        rounded-xl py-sm px-lg
         bg-transparent hover:bg-transparent 
-        text-moyen font-bold uppercase text-yellow
-        border-solid border-2 border-yellow
+        text-md font-bold uppercase text-yellow
+        border-solid border-2 border-yellow hover:border-yellow
         ">
             {buttonContent()}
-        </button>
+        </label>
     } 
     
     // else if(props.style=="undefined"){
