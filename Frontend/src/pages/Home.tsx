@@ -3,8 +3,6 @@ import { Button, Label, Profile, SideBarPopup, Header, SubHeader } from "compone
 import {ButtonInterface,LabelInterface,ProfileInterface,SubHeaderInterface,} from "interfaces";
 import { Link, Outlet } from "react-router-dom";
 
-
-
 export default function Home() {
     const subHeaderProps : SubHeaderInterface = 
 	{
@@ -14,26 +12,12 @@ export default function Home() {
 		text_title : "Mes bâtiments",
 	};
 	
-	let balise;
-      
-    balise = 
-		<section className="bg-background px-base">
+  	return (
+		<Fragment>
+			<Header />
 			<SubHeader props={subHeaderProps}/>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/Building" className="font-sans font-bold text-white">Test page Bâtiment</Link>
-					</li>
-				</ul>
-			</nav>
-		</section>;
-
-  return (
-    <Fragment>
-      <SideBarPopup />
-	  {balise}
-
-    </Fragment>  
-  );
+			<SideBarPopup />
+		</Fragment>  
+	);
 
 }

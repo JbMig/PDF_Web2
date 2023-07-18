@@ -25,6 +25,7 @@ module.exports = {
       lg_profile: "96px",
 
       sidebar: "320px",
+      full: "100%"
     },
     // text
     fontSize: {
@@ -37,8 +38,11 @@ module.exports = {
     fontFamily: {
       satoshi: ["satoshi"],
     },
-    dropShadow: {
-      lg: "0px 0px 32px 0px rgba(0, 0, 0, 0.25)",
-    },
+    // dropShadow: {
+    //   lg: "0px 0px 32px 0px rgba(0, 0, 0, 0.25)",
+    // },
+    boxShadow: {
+      header: "0px 8px 32px 0px rgba(0 0 0 / 0.25)"
+    }
   },
 };
