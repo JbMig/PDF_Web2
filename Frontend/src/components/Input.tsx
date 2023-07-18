@@ -1,4 +1,4 @@
-import { InputInterface } from "interfaces/index";
+import { InputInterface } from "interfaces";
 import React, { useState } from "react";
 
 export default function Input({

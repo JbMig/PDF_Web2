@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { LabelInterface } from "interfaces/index";
+import { LabelInterface } from "interfaces";
 
 export default function Label({ props }: { props: LabelInterface }) {
   // {text, style, color, icon}:{text: string, style: string, color:string, icon?: string}
