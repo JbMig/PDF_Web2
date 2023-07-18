@@ -14,7 +14,6 @@ export default function Building() {
 
 	return (
 		<section className="bg-background">
-			<Header />
 			<SubHeader props={subHeaderProps}/>
 		</section>
 	);

@@ -10,10 +10,10 @@ export default function App() {
 			<Route path={"/"} element={<Layout />}>
 				<Route index element={<Home />} />
 				<Route path={"*"} element={<NoMatch />} />
+				<Route path={"/Building"} element={<Building />} />
+				<Route path={"/login"} element={<Login />} />
+				<Route path={"/register"} element={<Register />} />
 			</Route>
-			<Route path={"/Building"} element={<Building />} />
-			<Route path={"/login"} element={<Login />} />
-			<Route path={"/register"} element={<Register />} />
 		</Routes>
 	);
 }
