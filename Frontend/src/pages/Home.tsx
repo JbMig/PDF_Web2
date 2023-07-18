@@ -44,14 +44,16 @@ export default function Home() {
   }
 
   return (
-    <>
+    <Fragment>
+
       <Header></Header>
       <SideBarPopup />
       <Button props={buttonPlein}/>
       <Button props={buttonVide}/>
       <Label props={test}/>
       <Profile props={test2}/>
-    </>  
+
+    </Fragment>  
   );
 
 }
