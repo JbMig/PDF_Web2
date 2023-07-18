@@ -28,7 +28,7 @@ export default function Home() {
 	};
 
   	return (
-		<section className="bg-background px-base">
+		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
 			<nav>
 				<ul>
