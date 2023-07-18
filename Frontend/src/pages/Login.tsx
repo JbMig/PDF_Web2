@@ -21,7 +21,11 @@ export default function Login() {
 
   return (
     <main className={"grid min-h-screen place-content-center bg-background"}>
-      <div className={"flex max-w-lg flex-col items-center px-md py-md"}>
+      <div
+        className={
+          "flex min-h-[550px] max-w-lg flex-col items-center px-md py-md"
+        }
+      >
         <img src={logo} alt="" className={"max-w-[48px] "} />
         <h1
           className={
