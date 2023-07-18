@@ -15,7 +15,7 @@ export default function Button({ props }: { props: ButtonInterface }) {
 				text-md rounded-xl border-2
 				border-solid border-border_yellow
 				bg-text_yellow px-lg
-				py-sm font-bold hover:border-border_yellow hover:bg-text_yellow"
+				py-sm h-btn font-bold hover:border-border_yellow hover:bg-text_yellow"
 			>
 				{buttonContent()}
 			</button>
@@ -26,7 +26,7 @@ export default function Button({ props }: { props: ButtonInterface }) {
 				className="
 				text-md rounded-xl border-2
 				border-solid border-yellow
-				bg-transparent px-lg py-sm font-bold
+				bg-transparent px-lg py-sm h-btn font-bold
 				uppercase text-yellow hover:border-yellow hover:bg-transparent
 				"
 			>

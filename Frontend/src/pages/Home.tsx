@@ -26,52 +26,17 @@ export default function Home() {
 		text_add : "Ajouter bâtiment",
 		text_title : "Mes bâtiments",
 	};
-	
-	let balise;
-      
-    balise = 
-	<section className="bg-background px-base">
-		<SubHeader props={subHeaderProps}/>
-		<nav>
-			<ul>
-				<li>
-					<Link to="/Building" className="font-sans font-bold text-white">Test page Bâtiment</Link>
-				</li>
-			</ul>
-		</nav>
-	</section>;
-	
-
-  // tests Sandie
-  // const buttonPlein : ButtonInterface = {
-  // 	text: 'Satoshi',
-  // 	style: 'fill',
-  // }
-  // const buttonVide : ButtonInterface = {
-  // 	text: 'abcdef',
-  // 	style: 'outline',
-  // }
-  //   const test : LabelInterface = {
-  //     	text: 'label',
-  //     	style: 'outline',
-  //     	label: 'test',
-  //   }
-
-  //   const test2 : ProfileInterface = {
-  //     	size: 'small',
-  //     	picture_link: undefined
-  //   }
 
   	return (
-		<Fragment>
-			{balise}
-			{/* tests Sandie */}
-			{/* <Header />
-			<SideBarPopup />
-			<Button props={buttonPlein}/>
-			<Button props={buttonVide}/>
-			<Label props={test}/>
-			<Profile props={test2}/> */}
-		</Fragment>
+		<section className="bg-background px-base">
+			<SubHeader props={subHeaderProps}/>
+			<nav>
+				<ul>
+					<li>
+						<Link to="/Building" className="font-sans font-bold text-white">Test page Bâtiment</Link>
+					</li>
+				</ul>
+			</nav>
+		</section>
   	);
 }

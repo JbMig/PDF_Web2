@@ -20,6 +20,7 @@ module.exports = {
       lg: "24px",
       xl: "32px",
       xxl: "40px",
+	  btn: "48px",
       sm_profile: "56px",
       base: "80px",
       lg_profile: "96px",

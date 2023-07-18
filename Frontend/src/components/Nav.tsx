@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import { Header } from "components";
 
-// Le lien vers home ici va devenir inutile, à condition d'inclure le header partout.
+// Ce fichier va probablement devenir inutile, et on déplacera simplement le header en haut de la page Home
 export default function Nav() {
 	let balise;
-	balise = <section className="bg-background px-base">
+	balise = <section className="">
 				<Header />
 			</section>;
 
