@@ -1,17 +1,19 @@
+import React from "react";
+
 interface State {
-	isTrue: boolean;
-	toggle: () => void;
+  isTrue: boolean;
+  toggle: () => void;
 }
 
 interface LabelInterface {
-	text: string;
-	style: string;
-	label: string;
+  text: string;
+  style: string;
+  label: string;
 }
 
 interface ButtonInterface {
-	text: string;
-	style: string;
+  text: string;
+  style: string;
 }
 
 interface SubHeaderInterface {
@@ -25,20 +27,30 @@ interface SubHeaderInterface {
 }
 
 interface ProfileInterface {
-	size: string;
-	picture_link: string | undefined;
+  size: string;
+  picture_link: string | undefined;
+}
+
+interface InputInterface {
+  type: string;
+  label: string;
+  name: string;
+  value: string | number;
+  onChange: (event: { target: { name: string; value: string } }) => void;
+  placeholder?: string;
+  required?: boolean;
 }
 
 interface NotificationsInterface {
-    open: boolean;
+  open: boolean;
 }
-
 
 export type {
-    State,
-    ButtonInterface,
-    LabelInterface,
-    ProfileInterface,
-	SubHeaderInterface,
-	NotificationsInterface
-}
+  State,
+  ButtonInterface,
+  LabelInterface,
+  ProfileInterface,
+  SubHeaderInterface,
+  InputInterface,
+  NotificationsInterface,
+};

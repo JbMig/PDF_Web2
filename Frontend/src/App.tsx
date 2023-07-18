@@ -12,9 +12,9 @@ export default function App() {
 				<Route path={"/Building"} element={<Building />} />
 				<Route path={"/Room"} element={<Room />} />
 				<Route path={"/Sensor"} element={<Sensor />} />
-				<Route path={"/login"} element={<Login />} />
-				<Route path={"/register"} element={<Register />} />
 			</Route>
+			<Route path={"/login"} element={<Login />} />
+			<Route path={"/register"} element={<Register />} />
 		</Routes>
 	);
 }

@@ -1,8 +1,7 @@
 import React from "react";
-import { SubHeaderInterface } from '../interfaces/interfaces'
-import { SubHeader } from "../components";
+import { SubHeaderInterface } from "interfaces";
+import { SubHeader } from "components";
 import { Link } from "react-router-dom";
-
 
 export default function Building() {
     const subHeaderProps : SubHeaderInterface = 

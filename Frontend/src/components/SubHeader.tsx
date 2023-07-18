@@ -1,10 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "components";
-import {
-	ButtonInterface,
-	SubHeaderInterface,
-} from "interfaces";
+import { ButtonInterface, SubHeaderInterface } from "interfaces";
 
 export default function SubHeader({ props }: { props: SubHeaderInterface }) {
 	
@@ -149,5 +146,5 @@ export default function SubHeader({ props }: { props: SubHeaderInterface }) {
 		);
 	}
 
-	return <Fragment>{balise}</Fragment>;
+  return <Fragment>{balise}</Fragment>;
 }
