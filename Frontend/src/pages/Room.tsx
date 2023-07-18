@@ -4,14 +4,14 @@ import { SubHeader } from "../components";
 import { Link } from "react-router-dom";
 
 
-export default function Building() {
+export default function Room() {
     const subHeaderProps : SubHeaderInterface = 
 	{
 		text_settings : "",
-		text_add : "Ajouter pièce",
+		text_add : "Ajouter capteur",
 		title_1 : "Nom du bâtiment",
-		title_path_1 : "",
-		title_2 : "",
+		title_path_1 : "/Building",
+		title_2 : "Nom de la pièce",
 		title_path_2 : "",
 		title_3 : "",
 	};
@@ -22,7 +22,7 @@ export default function Building() {
 			<nav>
 				<ul>
 					<li>
-						<Link to="/Room" className="font-sans font-bold text-white">Test page Pièce</Link>
+						<Link to="/Sensor" className="font-sans font-bold text-white">Test page Capteur</Link>
 					</li>
 				</ul>
 			</nav>

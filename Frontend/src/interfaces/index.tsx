@@ -15,10 +15,13 @@ interface ButtonInterface {
 }
 
 interface SubHeaderInterface {
-	doWeShowSettingsButton: boolean;
-	text_settings: string;
-	text_add: string;
-	text_title: string;
+    text_settings : string,
+	text_add : string,
+	title_1 : string,
+	title_path_1 : string,
+	title_2 : string,
+	title_path_2 : string,
+	title_3 : string,
 }
 
 interface ProfileInterface {

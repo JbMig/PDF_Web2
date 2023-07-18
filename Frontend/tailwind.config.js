@@ -5,7 +5,6 @@ module.exports = {
     colors: {
       main_yellow: "#FFEB82",
       border_yellow: "#BDB242",
-
       white: "#FFFFFF",
       black: "#000000",
       background: "#242529",
@@ -28,7 +27,7 @@ module.exports = {
     },
     fontSize: {
       base: "1rem",
-      medium: "1.25rem",
+      medium: "32px",
       big: "40px",
       title: "48px",
     },
