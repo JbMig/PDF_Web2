@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { ButtonInterface } from '../interfaces/interfaces'
 
 export default function Button({props} : {props : ButtonInterface}) {
@@ -31,8 +31,8 @@ export default function Button({props} : {props : ButtonInterface}) {
     } 
     
     return (
-        <>
+        <Fragment>
             {balise}      
-        </>
+        </Fragment>
     );
 }

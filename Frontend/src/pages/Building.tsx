@@ -1,9 +1,5 @@
 import React, { Fragment } from "react";
-import Button from "../components/Button";
-import { ButtonInterface, LabelInterface, ProfileInterface, SubHeaderInterface } from '../interfaces/interfaces'
-import Label from "../components/Label";
-import Profile from "../components/Profile";
-import SideBarPopup from "../components/popups/SidebarPopup";
+import { SubHeaderInterface } from '../interfaces/interfaces'
 import { Header, SubHeader } from "../components";
 
 
@@ -11,9 +7,9 @@ export default function Building() {
     const subHeaderProps : SubHeaderInterface = 
 	{
 		doWeShowSettingsButton : false,
-		text_settings : '',
-		text_add : 'Ajouter pièce',
-		text_title : 'Nom du bâtiment',
+		text_settings : "",
+		text_add : "Ajouter pièce",
+		text_title : "Nom du bâtiment",
 	};
 	
 	let balise;
