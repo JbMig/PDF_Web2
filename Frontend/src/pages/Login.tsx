@@ -67,7 +67,7 @@ export default function Login() {
             <a
               href="javascript:void(0)"
               className={
-                "font-satoshi text-base font-bold text-yellow max-sm:mt-[5px]"
+                "font-satoshi text-base font-bold text-main_yellow max-sm:mt-[5px]"
               }
             >
               Mot de passe oublié
@@ -75,7 +75,7 @@ export default function Login() {
           </span>
           <input
             className={
-              "w-full rounded-md bg-text_yellow p-sm font-satoshi text-base font-bold text-black"
+              "w-full rounded-md bg-main_yellow p-sm font-satoshi text-base font-bold text-black"
             }
             type="submit"
             value={"Se connecter"}
@@ -83,7 +83,7 @@ export default function Login() {
         </form>
         <p className={"mt-xl font-satoshi text-base font-normal text-white"}>
           Vous n'avez pas de compte ?{" "}
-          <Link to="/register" className={"font-bold text-yellow"}>
+          <Link to="/register" className={"font-bold text-main_yellow"}>
             S'inscrire
           </Link>
         </p>

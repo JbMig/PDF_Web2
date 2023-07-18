@@ -38,6 +38,11 @@ interface InputInterface {
   required?: boolean;
 }
 
+interface NotificationsInterface {
+    open: boolean;
+}
+
+
 export type {
   State,
   ButtonInterface,
@@ -45,4 +50,5 @@ export type {
   ProfileInterface,
   SubHeaderInterface,
   InputInterface,
+	NotificationsInterface
 };

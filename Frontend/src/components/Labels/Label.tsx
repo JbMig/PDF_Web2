@@ -22,9 +22,9 @@ export default function Label({ props }: { props: LabelInterface }) {
       <button
         className="
         btn rounded-xl border-2 border-solid 
-        border-border_yellow bg-text_yellow
+        border-border_yellow bg-main_yellow
         px-lg py-sm text-medium 
-        font-bold uppercase hover:bg-text_yellow "
+        font-bold uppercase hover:bg-main_yellow "
       >
         {buttonContent()}
       </button>
@@ -34,9 +34,9 @@ export default function Label({ props }: { props: LabelInterface }) {
       <button
         className="
         btn rounded-xl border-2 border-solid
-        border-yellow bg-transparent 
+        border-main_yellow bg-transparent 
         px-lg py-sm text-medium font-bold
-        uppercase text-yellow hover:bg-transparent
+        uppercase text-main_yellow hover:bg-transparent
         "
       >
         {buttonContent()}

@@ -3,50 +3,17 @@ import { SubHeaderInterface } from "interfaces";
 import { SubHeader } from "components";
 
 export default function Building() {
-  const subHeaderProps: SubHeaderInterface = {
-    doWeShowSettingsButton: false,
-    text_settings: "",
-    text_add: "Ajouter pièce",
-    text_title: "Nom du bâtiment",
-  };
+    const subHeaderProps : SubHeaderInterface = 
+	{
+		doWeShowSettingsButton : false,
+		text_settings : "",
+		text_add : "Ajouter pièce",
+		text_title : "Nom du bâtiment",
+	};
 
-  let balise;
-
-  balise = (
-    <section className="bg-background px-base">
-      <SubHeader props={subHeaderProps} />
-    </section>
-  );
-
-  // tests Sandie
-  // const buttonPlein : ButtonInterface = {
-  // 	text: 'Satoshi',
-  // 	style: 'fill',
-  // }
-  // const buttonVide : ButtonInterface = {
-  // 	text: 'abcdef',
-  // 	style: 'outline',
-  // }
-  //   const test : LabelInterface = {
-  //     	text: 'label',
-  //     	style: 'outline',
-  //     	label: 'test',
-  //   }
-
-  //   const test2 : ProfileInterface = {
-  //     	size: 'small',
-  //     	picture_link: undefined
-  //   }
-
-  return (
-    <Fragment>
-      {balise}
-      {/* tests Sandie */}
-      {/* <SideBarPopup />
-			<Button props={buttonPlein}/>
-			<Button props={buttonVide}/>
-			<Label props={test}/>
-			<Profile props={test2}/> */}
-    </Fragment>
-  );
+	return (
+		<section className="bg-background">
+			<SubHeader props={subHeaderProps}/>
+		</section>
+	);
 }
