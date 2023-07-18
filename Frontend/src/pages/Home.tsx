@@ -1,57 +1,37 @@
 import React, { Fragment } from "react";
-import Button from "../components/Button";
-import { ButtonInterface, LabelInterface, ProfileInterface } from '../interfaces/interfaces'
-import Label from "../components/Label";
-import Profile from "../components/Profile";
-import SideBarPopup from "../components/popups/SidebarPopup";
-import { Header } from "../components";
+import { Button, Label, Profile, SideBarPopup, Header, SubHeader } from "components";
+import {ButtonInterface,LabelInterface,ProfileInterface,SubHeaderInterface,} from "interfaces";
+import { Link, Outlet } from "react-router-dom";
+
 
 
 export default function Home() {
-    // const bellButton : ButtonInterface = {
-    // 	text: 'Notifs',
-    // 	style: 'outline',
-    // }
-    // const profileButton : ButtonInterface = {
-    // 	text: 'Profil',
-    // 	style: 'fill',
-    // }
-    //   let balise;
-      
-    // balise = <body className="bg-background_grey px-xxxl">
-    // 			<Header></Header>
-    // 			<h1 className="text-big font-sans font-bold text-white">Mes bâtiments</h1>
-    // 		</body>;
+    const subHeaderProps : SubHeaderInterface = 
+	{
+		doWeShowSettingsButton : true,
+		text_settings : "Paramètres généraux",
+		text_add : "Ajouter bâtiment",
+		text_title : "Mes bâtiments",
+	};
 	
-
-  const buttonPlein : ButtonInterface = {
-    text: 'Satoshi',
-    style: 'fill',
-  }
-  const buttonVide : ButtonInterface = {
-    text: 'abcdef',
-    style: 'outline',
-  }
-  const test : LabelInterface = {
-    text: 'label',
-    style: 'outline',
-    label: 'test',
-  }
-
-  const test2 : ProfileInterface = {
-    size: 'small',
-    picture_link: undefined
-  }
+	let balise;
+      
+    balise = 
+		<section className="bg-background px-base">
+			<SubHeader props={subHeaderProps}/>
+			<nav>
+				<ul>
+					<li>
+						<Link to="/Building" className="font-sans font-bold text-white">Test page Bâtiment</Link>
+					</li>
+				</ul>
+			</nav>
+		</section>;
 
   return (
     <Fragment>
-
-      <Header></Header>
       <SideBarPopup />
-      <Button props={buttonPlein}/>
-      <Button props={buttonVide}/>
-      <Label props={test}/>
-      <Profile props={test2}/>
+	  {balise}
 
     </Fragment>  
   );

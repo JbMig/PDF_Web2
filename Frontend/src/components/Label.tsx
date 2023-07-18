@@ -2,18 +2,8 @@ import React, { Fragment } from 'react';
 import { LabelInterface } from '../interfaces/interfaces'
 
 export default function Label({props} : {props : LabelInterface}) {
-    // {text, style, color, icon}:{text: string, style: string, color:string, icon?: string}
     function buttonContent(){
-        // if(props.icon == undefined){
             return props.text
-        // } else {
-        //     return (
-        //         <Fragment>
-        //             <img className="pr-2" src={props.icon} alt="icon button" />
-        //             {props.text}
-        //         </Fragment>
-        //     )
-        // }
     }
     let balise;
 
@@ -26,7 +16,6 @@ export default function Label({props} : {props : LabelInterface}) {
             {buttonContent()}
         </label>
     } 
-
     else if(props.style=="outline"){
         balise = <label htmlFor={props.label} className="
         rounded-xl py-sm px-lg
@@ -37,12 +26,7 @@ export default function Label({props} : {props : LabelInterface}) {
             {buttonContent()}
         </label>
     } 
-    
-    // else if(props.style=="undefined"){
-    //     balise = <button className={"btn btn-secondary text-neutral-600 font-os text-paragraph"} >
-    //         {buttonContent()}
-    //     </button>
-    // }
+
     return (
         <Fragment>
             {balise}      

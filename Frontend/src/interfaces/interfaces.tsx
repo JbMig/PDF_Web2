@@ -12,7 +12,14 @@ interface LabelInterface {
 interface ButtonInterface {
     text: string;
     style: string;
-  }
+}
+
+interface SubHeaderInterface {
+    doWeShowSettingsButton : boolean,
+	text_settings : string,
+	text_add : string,
+	text_title : string
+}
 
 interface ProfileInterface {
     size: string;
@@ -24,5 +31,6 @@ export type {
     State,
     ButtonInterface,
     LabelInterface,
-    ProfileInterface
+    ProfileInterface,
+	SubHeaderInterface
 }

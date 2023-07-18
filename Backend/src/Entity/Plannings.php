@@ -24,8 +24,9 @@ class Plannings
     #[ORM\Column]
     private ?int $target_value = null;
 
-    #[ORM\ManyToMany(targetEntity: Sensors::class, inversedBy: 'planning')]
-    private Collection $sensor_id;
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Sensors $sensor_id = null;
 
     public function __construct()
     {
@@ -73,26 +74,14 @@ class Plannings
         return $this;
     }
 
-    /**
-     * @return Collection<int, Sensors>
-     */
-    public function getSensorId(): Collection
+    public function getSensorId(): ?Sensors
     {
         return $this->sensor_id;
     }
 
-    public function addSensorId(Sensors $sensorId): static
+    public function setSensorId(Sensors $sensor_id): static
     {
-        if (!$this->sensor_id->contains($sensorId)) {
-            $this->sensor_id->add($sensorId);
-        }
-
-        return $this;
-    }
-
-    public function removeSensorId(Sensors $sensorId): static
-    {
-        $this->sensor_id->removeElement($sensorId);
+        $this->sensor_id = $sensor_id;
 
         return $this;
     }
