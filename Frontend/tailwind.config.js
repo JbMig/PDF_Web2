@@ -25,6 +25,7 @@ module.exports = {
       lg_profile: "96px",
 
       sidebar: "320px",
+      room_card: "500px",
       full: "100%"
     },
     // text
@@ -42,7 +43,16 @@ module.exports = {
     //   lg: "0px 0px 32px 0px rgba(0, 0, 0, 0.25)",
     // },
     boxShadow: {
-      header: "0px 8px 32px 0px rgba(0 0 0 / 0.25)"
+      header: "0px 8px 32px 0px rgba(0 0 0 / 0.5)"
+    },
+    extend: {
+      zIndex: {
+        '1': '10',
+        '2': '20',
+        '3': '30',
+        '4': '40',
+        '5': '50',
+      }
     }
   },
 };

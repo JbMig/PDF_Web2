@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Button from "./Button";
-import { ButtonInterface, ProfileInterface } from '../interfaces/interfaces'
-import Profile from "./Profile";
+import { ButtonInterface, ProfileInterface } from '../interfaces'
+import Button from "./Buttons/Button";
+import Profile from "./Labels/Profile";
 
 export default function Header() {
 	const bellButton : ButtonInterface = {
@@ -19,7 +19,7 @@ export default function Header() {
 
 	balise = 
 		<div className="flex">
-			<div className="bg-background py-lg px-base shadow-header flex w-full">
+			<div className="bg-background py-lg px-base shadow-header flex w-full fixed">
 
 				<div className="flex-1">
 					<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>

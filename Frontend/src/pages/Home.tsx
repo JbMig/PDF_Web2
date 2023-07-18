@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
-import { Button, Label, Profile, SideBarPopup, Header, SubHeader } from "components";
+import { Button, Label, Profile, SideBarPopup, Header, SubHeader, } from "components";
 import {ButtonInterface,LabelInterface,ProfileInterface,SubHeaderInterface,} from "interfaces";
 import { Link, Outlet } from "react-router-dom";
+import Body from "components/Body";
 
 export default function Home() {
     const subHeaderProps : SubHeaderInterface = 
@@ -16,7 +17,9 @@ export default function Home() {
 		<Fragment>
 			<Header />
 			<SubHeader props={subHeaderProps}/>
+			<SubHeader props={subHeaderProps}/>
 			<SideBarPopup />
+			<Body />
 		</Fragment>  
 	);
 

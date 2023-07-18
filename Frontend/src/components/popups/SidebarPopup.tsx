@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { ProfileInterface } from '../../interfaces/interfaces'
-import Profile from "../../components/Profile";
+import Profile from '../Labels/Profile';
+import { ProfileInterface } from "interfaces";
 
 export default function SideBarPopup() {
     const Pdp : ProfileInterface = {
@@ -14,7 +14,7 @@ export default function SideBarPopup() {
                 
                 <div className="drawer-side">
                     <label htmlFor="sidebar" className="drawer-overlay"></label>
-                    <div className="menu h-full bg-background text-white px-xxl py-none w-sidebar text-md">
+                    <div className="menu h-full bg-background text-white px-xxl py-none w-sidebar text-md z-5">
                         <div className="py-xxl flex-wrap space-y-lg border-b-2 border-gray_border">
                             <div className="flex justify-between">
                                 <Profile props={Pdp}/>

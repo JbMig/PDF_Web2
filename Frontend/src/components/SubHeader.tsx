@@ -34,7 +34,7 @@ export default function SubHeader({ props }: { props: SubHeaderInterface }) {
 		);
 	} else {
 		balise = (
-			<div className="flex bg-background py-xxl px-base z-0">
+			<div className="flex bg-background py-xxl px-base">
 				<div className="flex-1">
 					<span className="font-sans self-center text-big font-bold text-white hover:text-text_yellow">
 						{props.text_title}
