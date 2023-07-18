@@ -139,9 +139,7 @@ export default function SubHeader({ props }: { props: SubHeaderInterface }) {
 		balise = (
 			<div className="flex justify-between bg-background py-sm px-base">
 				{title_complete}
-				<div className="flex flex-row space-x-xxl self-center">
-					<Button props={addButton} />
-				</div>
+				{buttons}
 			</div>
 		);
 	}
