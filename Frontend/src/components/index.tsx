@@ -1,9 +1,9 @@
-import Nav from "./Nav/Nav";
-import Button from "./Button/Button";
-import Profile from "./Profile/Profile";
-import Label from "./Label/Label";
+import Nav from "./Nav";
+import Button from "./Buttons/Button";
+import Profile from "./Labels/Profile";
+import Label from "./Labels/Label";
 import SideBarPopup from "./popups/SideBarPopup";
-import Header from "./Header/Header";
-import SubHeader from "./SubHeader/SubHeader";
+import Header from "./Header";
+import SubHeader from "./SubHeader";
 
 export { Nav, Button, Profile, Label, SideBarPopup, Header, SubHeader };

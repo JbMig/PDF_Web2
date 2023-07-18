@@ -3,13 +3,13 @@ import React from "react";
 import logo from "images/logo-test.svg";
 
 export default function Login() {
-  return (
-    <main>
-      <div className={"flex h-screen flex-col items-center justify-center"}>
-        <img src={logo} alt="" />
-        <h1>Connectez-vous à votre compte</h1>
-        <p>Bon retour ! Veuillez saisir vos coordonnées.</p>
-      </div>
-    </main>
-  );
+	return (
+		<main>
+			<div className={"flex h-screen flex-col items-center justify-center"}>
+				<img src={logo} alt="" />
+				<h1>Connectez-vous à votre compte</h1>
+				<p>Bon retour ! Veuillez saisir vos coordonnées.</p>
+			</div>
+		</main>
+	);
 }

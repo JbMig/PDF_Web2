@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-import Button from "../Button";
-import { ButtonInterface, ProfileInterface } from '../../interfaces/interfaces'
-import Profile from "../Profile";
+import Button from "./Button";
+import { ButtonInterface, ProfileInterface } from '../interfaces/interfaces'
+import Profile from "./Profile";
 
 export default function Header() {
 	const bellButton : ButtonInterface = {

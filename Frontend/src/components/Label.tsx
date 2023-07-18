@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { LabelInterface } from '../interfaces/interfaces'
 
 export default function Label({props} : {props : LabelInterface}) {
@@ -44,8 +44,8 @@ export default function Label({props} : {props : LabelInterface}) {
     //     </button>
     // }
     return (
-        <>
+        <Fragment>
             {balise}      
-        </>
+        </Fragment>
     );
 }
