@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class BuildingController extends AbstractController
 {
-    #[Route('/building', name: 'building_index')]
+    #[Route('/building', name: 'index')]
     public function index(EntityManagerInterface $entityManager, Security $security): Response
     {
         $repository = $entityManager->getRepository(Buildings::class);
@@ -38,7 +38,7 @@ class BuildingController extends AbstractController
         }
     }
 
-    #[Route('/building/{id}', name: 'building_show')]
+    #[Route('/building/{id}', name: 'show')]
     public function show(EntityManagerInterface $entityManager, Security $security, int $id): Response
     {
         $user = $security->getUser();
@@ -66,19 +66,19 @@ class BuildingController extends AbstractController
     #[Route('/building/new', name: 'new_building')]
     public function new(EntityManagerInterface $entityManager, Security $security): Response
     {
-        $user = $security->getUser();
-        if ($user) {
+        // $user = $security->getUser();
+        // if ($user) {
             $building_type = ["logement", "lieux de travail"];
             return new JsonResponse([
                 'building_type' => $building_type,
                 'response' => 'success'
             ]);
-        }
-        else{
+    // }
+        // else{
             return new JsonResponse([
                 'response' => 'error'
             ]);
-        }
+        // }
     }
 
     #[Route('/building/create', name: 'create_building', methods: ['POST'])]
@@ -189,44 +189,6 @@ class BuildingController extends AbstractController
             $room->setBuilldingId($id);
 
             $entityManager->persist($room);
-            $entityManager->flush();
-            return new JsonResponse([
-                'response' => 'success'
-            ]);
-        } else {
-            return new JsonResponse([
-                'response' => 'error'
-            ]);
-        }
-
-    }
-
-    #[Route('/building/{id}/add_user', name: 'add_user', methods: ['POST'])]
-    public function addUser(EntityManagerInterface $entityManager, int $id): Response
-    {
-        $building_repository = $entityManager->getRepository(Buildings::class);
-        $building = $building_repository->find($id);
-
-        return new JsonResponse([
-            'building'=>$building,
-            'response' => 'success'
-        ]);
-    }
-
-    #[Route('/building/{id}/new_user', name: 'new_user', methods: ['POST'])]
-    public function newUser(EntityManagerInterface $entityManager, int $id, Request $request): Response
-    {
-        $formData = json_decode($request->getContent(), true);
-        $user_building = new UserBuilding();
-
-        if (isset($formData['user'])) {
-            $user_repository = $entityManager->getRepository(Users::class);
-            $user = $user_repository->findBy(array("mail" => $formData['mail']));
-
-            $user_building->setUserId($user->getId());
-            $user_building ->setBuilldingId($id);
-
-            $entityManager->persist($user_building );
             $entityManager->flush();
             return new JsonResponse([
                 'response' => 'success'

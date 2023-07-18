@@ -30,19 +30,19 @@ class Sensors
     #[ORM\ManyToMany(targetEntity: Plannings::class, mappedBy: 'sensor_id')]
     private Collection $plannings;
 
+    #[ORM\ManyToMany(targetEntity: Rooms::class, inversedBy: 'sensors')]
+    private Collection $room_id;
 
-    #[ORM\ManyToOne(inversedBy: 'sensor_id')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Plannings $plannings_id = null;
+    #[ORM\ManyToMany(targetEntity: SensorTypes::class, inversedBy: 'sensors')]
+    private Collection $type_id;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Rooms $room_id = null;
-
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?SensorTypes $type_id = null;
-
+    public function __construct()
+    {
+        $this->planning = new ArrayCollection();
+        $this->room_id = new ArrayCollection();
+        $this->type_id = new ArrayCollection();
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -122,41 +122,52 @@ class Sensors
 
         return $this;
     }
-    
-    public function getPlanningsId(): ?Plannings
-    {
-        return $this->plannings_id;
-    }
 
-    public function setPlanningsId(?Plannings $plannings_id): static
-    {
-        $this->plannings_id = $plannings_id;
-
-        return $this;
-    }
-
-    public function getRoomId(): ?Rooms
+    /**
+     * @return Collection<int, Rooms>
+     */
+    public function getRoomId(): Collection
     {
         return $this->room_id;
     }
 
-    public function setRoomId(Rooms $room_id): static
+    public function addRoomId(Rooms $roomId): static
     {
-        $this->room_id = $room_id;
+        if (!$this->room_id->contains($roomId)) {
+            $this->room_id->add($roomId);
+        }
 
         return $this;
     }
 
-    public function getTypeId(): ?SensorTypes
+    public function removeRoomId(Rooms $roomId): static
+    {
+        $this->room_id->removeElement($roomId);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, SensorTypes>
+     */
+    public function getTypeId(): Collection
     {
         return $this->type_id;
     }
 
-    public function setTypeId(SensorTypes $type_id): static
+    public function addTypeId(SensorTypes $typeId): static
     {
-        $this->type_id = $type_id;
+        if (!$this->type_id->contains($typeId)) {
+            $this->type_id->add($typeId);
+        }
 
         return $this;
     }
 
+    public function removeTypeId(SensorTypes $typeId): static
+    {
+        $this->type_id->removeElement($typeId);
+
+        return $this;
+    }
 }

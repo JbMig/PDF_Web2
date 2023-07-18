@@ -11,8 +11,8 @@ class RoomTypes
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[ORM\ManyToMany(targetEntity: Rooms::class, mappedBy: 'id')]
     private ?int $id = null;
+
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;

@@ -60,7 +60,7 @@ class RoomController extends AbstractController
 
     }
 
-    #[Route('/room/{id}/delete', name: 'delete_room', methods: ['DELETE'])]
+    #[Route('/room{id}/delete', name: 'delete_room', methods: ['DELETE'])]
     public function delete(EntityManagerInterface $entityManager, int $id): Response
     {
         $room_repository = $entityManager->getRepository(Rooms::class);

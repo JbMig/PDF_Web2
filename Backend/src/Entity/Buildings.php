@@ -24,13 +24,12 @@ class Buildings
     #[ORM\Column(length: 255,nullable: true)]
     private ?string $type = null;
 
+    #[ORM\ManyToOne(inversedBy: 'buildings')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Users $user_id = null;
 
     #[ORM\ManyToMany(targetEntity: Rooms::class, mappedBy: 'building_id')]
     private Collection $rooms;
-
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Users $user_id = null;
 
     public function __construct()
     {
@@ -83,9 +82,36 @@ class Buildings
         return $this->user_id;
     }
 
-    public function setUserId(Users $user_id): static
+    public function setUserId(?Users $user_id): static
     {
         $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Rooms>
+     */
+    public function getRooms(): Collection
+    {
+        return $this->rooms;
+    }
+
+    public function addRoom(Rooms $room): static
+    {
+        if (!$this->rooms->contains($room)) {
+            $this->rooms->add($room);
+            $room->addBuildingId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRoom(Rooms $room): static
+    {
+        if ($this->rooms->removeElement($room)) {
+            $room->removeBuildingId($this);
+        }
 
         return $this;
     }
