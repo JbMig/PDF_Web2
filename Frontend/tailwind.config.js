@@ -3,8 +3,7 @@ module.exports = {
   plugins: [require("daisyui")],
   theme: {
     colors: {
-      yellow: "#FFF37A",
-      text_yellow: "#FFEB82",
+      main_yellow: "#FFEB82",
       border_yellow: "#BDB242",
 
       white: "#FFFFFF",

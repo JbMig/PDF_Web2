@@ -26,10 +26,16 @@ interface ProfileInterface {
 	picture_link: string | undefined;
 }
 
+interface NotificationsInterface {
+    open: boolean;
+}
+
+
 export type {
-	State,
-	ButtonInterface,
-	LabelInterface,
-	ProfileInterface,
+    State,
+    ButtonInterface,
+    LabelInterface,
+    ProfileInterface,
 	SubHeaderInterface,
-};
+	NotificationsInterface
+}
