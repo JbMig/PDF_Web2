@@ -1,5 +1,5 @@
 import React from "react";
-import { SubHeaderInterface } from '../interfaces/interfaces'
+import { SubHeaderInterface } from 'interfaces'
 import { SubHeader } from "../components";
 
 
