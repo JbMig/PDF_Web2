@@ -39,9 +39,8 @@ interface InputInterface {
 }
 
 interface NotificationsInterface {
-    open: boolean;
+  open: boolean;
 }
-
 
 export type {
   State,
@@ -50,5 +49,5 @@ export type {
   ProfileInterface,
   SubHeaderInterface,
   InputInterface,
-	NotificationsInterface
+  NotificationsInterface,
 };
