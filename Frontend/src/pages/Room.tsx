@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { SubHeaderInterface } from 'interfaces'
 import { SubHeader } from "../components";
 import { Link } from "react-router-dom";
@@ -16,7 +16,9 @@ export default function Room() {
 		title_3 : "",
 	};
 
-	return (
+	let balise;
+
+	balise = (
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
 			<nav>
@@ -27,5 +29,12 @@ export default function Room() {
 				</ul>
 			</nav>
 		</section>
+	)
+	
+	
+	return (
+		<Fragment>
+			{balise}
+		</Fragment>
 	);
 }

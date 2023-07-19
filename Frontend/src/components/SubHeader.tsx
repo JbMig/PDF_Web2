@@ -123,7 +123,7 @@ export default function SubHeader({ props }: { props: SubHeaderInterface }) {
 
 	if(props.text_settings !== "" || props.text_add !== "" ) {
 		balise = (
-		<div className="flex justify-between bg-background py-sm px-base">
+		<div className="flex justify-between bg-background py-xl px-base mt-header_height">
 			{title_complete}
 			{buttons}
 		</div>

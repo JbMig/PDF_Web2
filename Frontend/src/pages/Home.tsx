@@ -20,8 +20,6 @@ export default function Home() {
 	
   	return (
 		<Fragment>
-			<Header />
-			<SubHeader props={subHeaderProps}/>
 			<SubHeader props={subHeaderProps}/>
 			<SideBarPopup />
 			<Body />

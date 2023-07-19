@@ -7,7 +7,7 @@ export default function Profile({ props }: { props: ProfileInterface }) {
   if (props.size == "small") {
     if (props.picture_link == undefined) {
       balise = (
-        <label htmlFor="test" className="self-center hover:cursor-pointer">
+        <label htmlFor="sidebar" className="self-center hover:cursor-pointer">
           <div className="avatar h-sm_profile w-sm_profile">
             <div className="rounded-full border-2 border-solid border-white bg-background hover:border-white">
               <svg
@@ -30,7 +30,7 @@ export default function Profile({ props }: { props: ProfileInterface }) {
       );
     } else {
       balise = (
-        <label htmlFor="test" className="self-center hover:cursor-pointer">
+        <label htmlFor="sidebar" className="self-center hover:cursor-pointer">
           <div className="avatar h-sm_profile w-sm_profile">
             <div className="rounded-full border-2 border-solid border-white bg-background hover:border-white"></div>
           </div>

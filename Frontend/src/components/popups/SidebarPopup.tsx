@@ -13,9 +13,9 @@ export default function SideBarPopup() {
 
   return (
     <div className="drawer drawer-end">
-      <input id="test" type="checkbox" className="drawer-toggle" />
+      <input id="sidebar" type="checkbox" className="drawer-toggle" />
       <div className="drawer-side">
-        <label htmlFor="test" className="drawer-overlay"></label>
+        <label htmlFor="sidebar" className="drawer-overlay"></label>
         <div className="text-md menu h-full w-sidebar bg-background px-xxl py-none text-white">
           <div className="flex-wrap space-y-lg border-b-2 border-gray_border py-xxl">
 
@@ -23,7 +23,7 @@ export default function SideBarPopup() {
 
               <Profile props={Pdp} />
 
-              <label htmlFor="test" className="text-md font-bold">
+              <label htmlFor="sidebar" className="text-md font-bold">
                 ✕
               </label>
 

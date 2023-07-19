@@ -22,6 +22,7 @@ module.exports = {
       sm_profile: "56px",
       base: "80px",
       lg_profile: "96px",
+      header_height: "120px",
 
       sidebar: "320px",
       room_card: "500px",

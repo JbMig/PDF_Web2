@@ -9,7 +9,7 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
 		balise = (
 			<div className="">
 
-				<div className="collapse collapse-arrow w-room_card bg-yellow">
+				<div className="collapse collapse-arrow w-room_card bg-main_yellow">
 					<input type="checkbox"/> 
 					<div className="collapse-title text-xl font-medium">
 						<p>{props.room}</p>
