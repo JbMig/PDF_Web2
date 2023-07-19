@@ -3,10 +3,8 @@ module.exports = {
   plugins: [require("daisyui")],
   theme: {
     colors: {
-      yellow: "#FFF37A",
-      text_yellow: "#FFEB82",
+      main_yellow: "#FFEB82",
       border_yellow: "#BDB242",
-
       white: "#FFFFFF",
       black: "#000000",
       background: "#242529",
@@ -20,6 +18,7 @@ module.exports = {
       lg: "24px",
       xl: "32px",
       xxl: "40px",
+      btn: "48px",
       sm_profile: "56px",
       base: "80px",
       lg_profile: "96px",

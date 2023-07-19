@@ -27,10 +27,6 @@ class SensorTypes
     #[ORM\ManyToMany(targetEntity: Sensors::class, mappedBy: 'type_id')]
     private Collection $sensors;
 
-    #[ORM\ManyToOne(inversedBy: 'type_id')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Sensors $sensors_id = null;
-
     public function __construct()
     {
         $this->sensors = new ArrayCollection();
@@ -100,18 +96,6 @@ class SensorTypes
         if ($this->sensors->removeElement($sensor)) {
             $sensor->removeTypeId($this);
         }
-
-        return $this;
-    }
-
-    public function getSensorsId(): ?Sensors
-    {
-        return $this->sensors_id;
-    }
-
-    public function setSensorsId(?Sensors $sensors_id): static
-    {
-        $this->sensors_id = $sensors_id;
 
         return $this;
     }
