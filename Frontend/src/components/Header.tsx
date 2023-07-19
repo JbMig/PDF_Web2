@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import { NotificationsInterface, ProfileInterface } from "interfaces";
-import { Notifications, Profile } from "components";
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { NotificationsInterface, ProfileInterface } from 'interfaces';
+import { Notifications, Profile } from 'components';
 
 export default function Header() {
   const bellButton: NotificationsInterface = {
@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   const profilePicture: ProfileInterface = {
-    size: "small",
+    size: 'small',
     picture_link: undefined,
     // isTrue: true,
     // toggle:(),
@@ -18,7 +18,7 @@ export default function Header() {
   let balise;
 
   balise = (
-    <div className="fixed flex w-full bg-background px-base py-lg shadow-header">
+    <div className="fixed z-1 flex w-full bg-background px-base py-lg shadow-header">
       <div className="flex-1">
         <Link
           to="/"
