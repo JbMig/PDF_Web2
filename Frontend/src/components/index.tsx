@@ -6,15 +6,16 @@ import SideBarPopup from "./Popups/SideBarPopups";
 import Header from "./Header";
 import SubHeader from "./SubHeader";
 import Input from "./Input";
-
+import RoomCard from "./Cards/RoomCard";
 
 export {
-	Button,
-	Profile,
-	Notifications,
-	Label,
-	SideBarPopup,
-	Header,
-	SubHeader,
-	Input,
+  Button,
+  Profile,
+  Notifications,
+  Label,
+  SideBarPopup,
+  Header,
+  SubHeader,
+  Input,
+  RoomCard,
 };

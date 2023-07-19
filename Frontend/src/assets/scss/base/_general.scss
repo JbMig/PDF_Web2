@@ -13,3 +13,11 @@ body {
   color: $black;
   font-family: $satoshi;
 }
+
+html,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

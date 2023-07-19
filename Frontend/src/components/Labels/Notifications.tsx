@@ -1,8 +1,12 @@
 import React, { Fragment } from "react";
 import { NotificationsInterface } from "interfaces";
 
-export default function Notifications({props,}: {props: NotificationsInterface;}) {
-    let balise;
+export default function Notifications({
+  props,
+}: {
+  props: NotificationsInterface;
+}) {
+  let balise;
 
   if (props.open) {
     balise = (

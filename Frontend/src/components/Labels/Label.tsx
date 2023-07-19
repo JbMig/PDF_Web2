@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { LabelInterface } from "interfaces";
 
 export default function Label({ props }: { props: LabelInterface }) {
-  
   function buttonContent() {
     return props.text;
   }
@@ -36,9 +35,5 @@ export default function Label({ props }: { props: LabelInterface }) {
     );
   }
 
-  return (
-    <Fragment>
-      {balise}
-    </Fragment>
-  );
+  return <Fragment>{balise}</Fragment>;
 }
