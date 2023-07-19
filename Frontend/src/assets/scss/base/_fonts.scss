@@ -1,3 +1,8 @@
+// Icomoon
+$icomoon-font-path: "./assets/fonts/icons/";
+@import "../../fonts/icons/style";
+
+// Project fonts
 @include font-face(
   "satoshi",
   "./assets/fonts/Satoshi-Bold/Satoshi-Bold",
