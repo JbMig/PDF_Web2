@@ -35,13 +35,24 @@ interface ButtonInterface {
 }
 
 interface SubHeaderInterface {
-  text_settings : string,
+  	text_settings : string,
 	text_add : string,
 	title_1 : string,
 	title_path_1 : string,
 	title_2 : string,
 	title_path_2 : string,
 	title_3 : string,
+}
+interface SubHeaderTitleInterface {
+	title_1 : string,
+	title_path_1 : string,
+	title_2 : string,
+	title_path_2 : string,
+	title_3 : string,
+}
+interface SubHeaderButtonsInterface {
+  	text_settings : string,
+	text_add : string,
 }
 
 
@@ -73,6 +84,8 @@ export type {
   LabelInterface,
   ProfileInterface,
   SubHeaderInterface,
+  SubHeaderTitleInterface,
+  SubHeaderButtonsInterface,
   RoomCardInterface,
   InputInterface,
   NotificationsInterface,
