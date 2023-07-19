@@ -1,8 +1,7 @@
 import React, { Fragment } from "react";
-import { SideBarPopup, Header, SubHeader} from "components";
+import { SideBarPopup, SubHeader} from "components";
 import {SubHeaderInterface,} from "interfaces";
 import Body from "components/Body";
-import { Link, Outlet } from "react-router-dom";
 
 
 

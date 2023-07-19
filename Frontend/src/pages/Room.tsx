@@ -21,7 +21,7 @@ export default function Room() {
 	balise = (
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
-			<nav>
+			<nav className="bg-black">
 				<ul>
 					<li>
 						<Link to="/Sensor" className="font-sans font-bold text-white">Test page Capteur</Link>
