@@ -1,35 +1,37 @@
 import React, { Fragment } from "react";
-import {SensorCardInterface} from "interfaces";
+import {SensorCardInterface, SensorInterface} from "interfaces";
 import {SensorCard} from "components";
 
 export default function RoomBody() {
-    const Card_1 : SensorCardInterface = 
+    const Sensor_1 : SensorInterface = 
 	{
-        sensor : "Température",
-		nb_data : 1,
-		data_list : ["20,5°C"],
-		number_bg : 1,
+        sensor_name : "Température",
+        alert : false,
+        data : "17°C" ,
+        settings : "18°C",
     };
-    const Card_2 : SensorCardInterface = 
+
+    const Sensor_2 : SensorInterface = 
 	{
-        sensor : "Humidité",
-		nb_data : 1,
-		data_list : ["36%"],
-		number_bg : 2,
+        sensor_name : "Détecteur de fuite",
+        alert : false,
+        data : undefined ,
+        settings : undefined,
     };
-    const Card_3 : SensorCardInterface = 
+    
+    const Sensor_3 : SensorInterface = 
 	{
-        sensor : "Fuite d'eau",
-		nb_data : 1,
-		data_list : ["Pas de fuite détectée"],
-		number_bg : 3,
+        sensor_name : "Détecteur de fumée",
+        alert : true,
+        data : undefined ,
+        settings : undefined,
     };
-	const card_list = [Card_1, Card_2, Card_3, Card_1, Card_2];
+	const card_list = [Sensor_1, Sensor_2, Sensor_3];
     let balise;
 
 	balise = 
 		<div className="w-full min-h-full bg-background py-lg px-base">
-            <div className="grid grid-cols-2 gap-base">
+            <div className="grid grid-cols-1">
 				{card_list.map(function(card) {
 					return (<SensorCard props={card}/>)
 				})}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import {SensorInterface} from "interfaces";
-import Sensor from "./Sensor";
+import Sensor from "./Cards/SensorCard";
 
 
 
