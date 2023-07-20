@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
-import {RoomCardInterface, SensorInterface} from "interfaces";
-import RoomCard from "./Cards/RoomCard";
+import {SensorInterface} from "interfaces";
 import Sensor from "./Sensor";
+
+
 
 export default function Body() {
   
@@ -20,6 +21,7 @@ export default function Body() {
         data : undefined ,
         settings : undefined,
     };
+    
     const Sensor_3 : SensorInterface = 
 	{
         sensor_name : "Détecteur de fumée",
@@ -30,7 +32,7 @@ export default function Body() {
       
     let balise;
 
-	balise = 
+	balise = (
 		<div className="w-full h-full bg-background py-lg px-base">
             {/* en fonction du chemin contient :
             le composant des cartes bâtiment, 
@@ -41,6 +43,7 @@ export default function Body() {
             <Sensor props={Sensor_n} />
             <Sensor props={Sensor_3} />            
 		</div>
+    );
 	
   	return (
 		<Fragment>

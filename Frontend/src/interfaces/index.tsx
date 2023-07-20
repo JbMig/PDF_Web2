@@ -58,10 +58,10 @@ interface SubHeaderButtonsInterface {
 
 interface InputInterface {
   type: string;
-  label: string;
+  label?: string;
   name: string;
   value: string | number;
-  onChange: (event: { target: { name: string; value: string } }) => void;
+  onChange?: (event: { target: { name: string; value: string } }) => void;
   placeholder?: string;
   required?: boolean;
 }
@@ -84,6 +84,10 @@ interface SensorInterface {
   settings : any
 }
 
+interface ChangeSettingsPopupInterface {
+  // id : number;
+  value : any;  
+}
 
 export type {
   State,
@@ -96,5 +100,6 @@ export type {
   RoomCardInterface,
   InputInterface,
   NotificationsInterface,
-  SensorInterface
+  SensorInterface,
+  ChangeSettingsPopupInterface
 }

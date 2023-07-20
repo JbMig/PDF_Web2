@@ -1,5 +1,8 @@
 import React, { Fragment } from "react";
-import { SensorInterface } from "interfaces";
+import { ChangeSettingsPopupInterface, SensorInterface } from "interfaces";
+import ChangeSettings from "./Popups/ChangeSettings";
+
+
 
 export default function Sensor({ props }: { props: SensorInterface }) {
 
@@ -9,17 +12,26 @@ export default function Sensor({ props }: { props: SensorInterface }) {
             return alertMessage;
         }
     }
+
+    let settings = props.settings;
+
+    const ChangeSetting : ChangeSettingsPopupInterface = 
+	{
+        value : settings,
+    };
+
     function sensorData() {
         if (props.data != null) {
             return (
                 <div>
                     <p className="text-gray text-base font-bold">data : {props.data}</p>
                     {/* faire lien vers pop up pour modifier settings */}
-                    <p className="text-gray text-base font-bold">settings : <span className="text-main_yellow">{props.settings}</span> </p>
+                    <p className="text-gray text-base font-bold">settings : <span className="text-main_yellow hover:underline"><ChangeSettings props={ChangeSetting}/></span> </p>
                 </div>
             ) ;
         }
     }
+
     let balise;
 
     balise = (
