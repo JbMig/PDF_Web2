@@ -11,8 +11,6 @@ export default function Building() {
 		title_1: "Nom du bâtiment",
 		title_path_1: "",
 		title_2: "",
-		title_path_2: "",
-		title_3: "",
 	};
 	
 	let balise;

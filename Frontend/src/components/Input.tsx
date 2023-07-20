@@ -34,12 +34,12 @@ export default function Input({
 
     const handleCheckboxChange = () => {
       setChecked(!checked);
-      onChange({
-        target: {
-          name: name,
-          value: (!checked).toString(),
-        },
-      });
+      // onChange({
+      //   target: {
+      //     name: name,
+      //     value: (!checked).toString(),
+      //   },
+      // });
     };
 
     return (
@@ -62,5 +62,7 @@ export default function Input({
         {label}
       </label>
     );
+
   }
+
 }

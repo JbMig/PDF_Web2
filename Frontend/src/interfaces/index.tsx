@@ -42,15 +42,11 @@ interface SubHeaderInterface {
   title_1: string;
   title_path_1: string;
   title_2: string;
-  title_path_2: string;
-  title_3: string;
 }
 interface SubHeaderTitleInterface {
-  title_1: string;
-  title_path_1: string;
-  title_2: string;
-  title_path_2: string;
-  title_3: string;
+	title_1 : string,
+	title_path_1 : string,
+	title_2 : string,
 }
 interface SubHeaderButtonsInterface {
   text_settings: string;
@@ -59,10 +55,10 @@ interface SubHeaderButtonsInterface {
 
 interface InputInterface {
   type: string;
-  label: string;
+  label?: string;
   name: string;
   value: string | number;
-  onChange: (event: { target: { name: string; value: string } }) => void;
+  onChange?: (event: { target: { name: string; value: string } }) => void;
   placeholder?: string;
   required?: boolean;
   autoComplete?: string;
@@ -87,10 +83,16 @@ interface RoomCardInterface {
 }
 
 interface SensorCardInterface {
-  sensor: string;
-  nb_data: number;
-  data_list: Array<string>;
-  number_bg: number;
+	sensor_name : string;
+  	data: string ;
+	settings: string;
+  	number_bg : number;
+	alert : boolean;
+}
+
+interface ChangeSettingsPopupInterface {
+  // id : number;
+  value : any;
 }
 
 export type {
@@ -106,4 +108,5 @@ export type {
   SensorCardInterface,
   InputInterface,
   NotificationsInterface,
-};
+  ChangeSettingsPopupInterface
+}
