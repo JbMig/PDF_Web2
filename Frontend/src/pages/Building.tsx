@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { SubHeaderInterface } from "interfaces";
-import { BuildingBody, SideBarPopup, SubHeader } from "components";
+import { BuildingBody, SideBarPopup, SubHeader, NotificationsPopup } from "components";
 import { Link } from "react-router-dom";
 
 export default function Building() {
@@ -19,6 +19,7 @@ export default function Building() {
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
 			<SideBarPopup />
+			<NotificationsPopup />
 			<BuildingBody />
 		</section>
 	

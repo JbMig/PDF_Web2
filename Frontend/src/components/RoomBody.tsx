@@ -2,14 +2,7 @@ import React from "react";
 import {SensorCardInterface} from "interfaces";
 import {SensorCard} from "components";
 
-// sensor_name : string;
-// data: string ;
-// settings: any;
-// number_bg : number;
-// alert : any;
 export default function RoomBody() {
-
-    // répéter la const et l'ajout dans la div autant de fois qu'il y a de capteurs dans la pièce ou autre moyen
     const Card_1 : SensorCardInterface = 
 	{
         sensor_name : "Température",

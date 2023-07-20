@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { SideBarPopup, SubHeader, HomeBody} from "components";
+import { SideBarPopup, SubHeader, HomeBody, NotificationsPopup } from "components";
 import {SubHeaderInterface,} from "interfaces";
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
     <Fragment>
       <SubHeader props={subHeaderProps} />
       <SideBarPopup />
+	  <NotificationsPopup />
       <HomeBody />
     </Fragment>
   );

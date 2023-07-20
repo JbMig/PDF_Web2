@@ -10,7 +10,7 @@ export default function Notifications({
 
   if (props.open) {
     balise = (
-      <label htmlFor="test" className="self-center hover:cursor-pointer">
+      <label htmlFor="popUp" className="self-center hover:cursor-pointer">
         <div className="avatar h-xxl w-xxl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function Notifications({
     );
   } else {
     balise = (
-      <label htmlFor="test" className="self-center hover:cursor-pointer">
+      <label htmlFor="popUp" className="self-center hover:cursor-pointer">
         <div className="avatar h-xxl w-xxl">
           <svg
             xmlns="http://www.w3.org/2000/svg"

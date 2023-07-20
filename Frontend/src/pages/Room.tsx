@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { SubHeaderInterface } from 'interfaces'
-import { RoomBody, SideBarPopup, SubHeader } from "../components";
+import { RoomBody, SideBarPopup, SubHeader, NotificationsPopup } from "../components";
 
 export default function Room() {
   const subHeaderProps: SubHeaderInterface = {
@@ -17,6 +17,7 @@ export default function Room() {
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
 			<SideBarPopup />
+			<NotificationsPopup />
 			<RoomBody />
 		</section>
 	)

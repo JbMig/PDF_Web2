@@ -3,6 +3,7 @@ import Profile from "./Labels/Profile";
 import Notifications from "./Labels/Notifications";
 import Label from "./Labels/Label";
 import SideBarPopup from "./Popups/SideBarPopups";
+import NotificationsPopup from "./Popups/NotificationsPopup";
 import Header from "./Header";
 import SubHeader from "./SubHeader";
 import SubHeaderTitle from "./SubHeaderTitle";
@@ -22,6 +23,7 @@ export {
 	Notifications,
 	Label,
 	SideBarPopup,
+	NotificationsPopup,
 	Header,
 	SubHeader,
 	SubHeaderTitle,
