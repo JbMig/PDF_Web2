@@ -3,8 +3,6 @@ import {BuildingCardInterface} from "interfaces";
 import {BuildingCard} from "components";
 
 export default function HomeBody() {
-
-    // répéter la const et l'ajout dans la div autant de fois qu'il y a de batiments ou autre moyen
     const Card_1 : BuildingCardInterface = 
 	{
         building : "Appart",

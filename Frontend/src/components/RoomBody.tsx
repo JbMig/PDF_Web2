@@ -3,8 +3,6 @@ import {SensorCardInterface} from "interfaces";
 import {SensorCard} from "components";
 
 export default function RoomBody() {
-
-    // répéter la const et l'ajout dans la div autant de fois qu'il y a de capteurs dans la pièce ou autre moyen
     const Card_1 : SensorCardInterface = 
 	{
         sensor : "Température",

@@ -3,8 +3,6 @@ import {RoomCardInterface} from "interfaces";
 import {RoomCard} from "components";
 
 export default function BuildingBody() {
-
-    // répéter la const et l'ajout dans la div autant de fois qu'il y a de piece dans le batiment ou autre moyen
     const Card_1 : RoomCardInterface = 
 	{
         room : "Séjour",
