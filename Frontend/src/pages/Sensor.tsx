@@ -1,6 +1,6 @@
 import React from "react";
 import { SubHeaderInterface } from "interfaces";
-import { SubHeader } from "components";
+import { SubHeader, SideBarPopup } from "components";
 
 export default function Sensor() {
   const subHeaderProps: SubHeaderInterface = {
@@ -13,9 +13,10 @@ export default function Sensor() {
     title_3: "Nom du capteur",
   };
 
-  return (
-    <section className="bg-background">
-      <SubHeader props={subHeaderProps} />
-    </section>
-  );
+	return (
+		<section className="bg-background">
+			<SubHeader props={subHeaderProps}/>
+			<SideBarPopup />
+		</section>
+	);
 }

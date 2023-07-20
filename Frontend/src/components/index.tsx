@@ -9,6 +9,10 @@ import SubHeaderTitle from "./SubHeaderTitle";
 import SubHeaderButtons from "./Buttons/SubHeaderButtons";
 import Input from "./Input";
 import RoomCard from "./Cards/RoomCard";
+import HomeBody from "./HomeBody";
+import BuildingBody from "./BuildingBody";
+import RoomBody from "./RoomBody";
+
 
 export {
 	Button,
@@ -22,4 +26,7 @@ export {
 	SubHeaderButtons,
 	Input,
 	RoomCard,
+	HomeBody,
+	BuildingBody,
+	RoomBody
 };

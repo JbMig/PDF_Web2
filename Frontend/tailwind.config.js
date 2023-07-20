@@ -23,10 +23,11 @@ module.exports = {
       base: "80px",
       lg_profile: "96px",
       header_height: "120px",
-
       sidebar: "320px",
       room_card: "500px",
-      full: "100%",
+      buiding_card: "400px",
+      room_card: "600px",
+      full: "100%"
     },
     // text
     fontSize: {
@@ -36,6 +37,10 @@ module.exports = {
       title: "48px",
     },
     // font
+    fontWeight: {
+      bold: "700",
+      regular: "400",
+    },
     fontFamily: {
       satoshi: ["satoshi"],
     },

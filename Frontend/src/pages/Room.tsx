@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-import { SubHeaderInterface } from "interfaces";
-import { SubHeader } from "components";
-import { Link } from "react-router-dom";
+import { SubHeaderInterface } from 'interfaces'
+import { RoomBody, SideBarPopup, SubHeader } from "../components";
 
 export default function Room() {
   const subHeaderProps: SubHeaderInterface = {
@@ -19,13 +18,8 @@ export default function Room() {
 	balise = (
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
-			<nav className="bg-black">
-				<ul>
-					<li>
-						<Link to="/Sensor" className="font-sans font-bold text-white">Test page Capteur</Link>
-					</li>
-				</ul>
-			</nav>
+			<SideBarPopup />
+			<RoomBody />
 		</section>
 	)
 	
