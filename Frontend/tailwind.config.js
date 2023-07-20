@@ -26,15 +26,15 @@ module.exports = {
 
       sidebar: "320px",
       room_card: "500px",
-      full: "100%"
+      full: "100%",
     },
     // text
     fontSize: {
-			'base': '1rem',
-			'medium': '1.25rem',
-			'big': '40px',
-			'title': '48px',
-		},
+      base: "1rem",
+      medium: "1.25rem",
+      big: "40px",
+      title: "48px",
+    },
     // font
     fontFamily: {
       satoshi: ["satoshi"],
@@ -43,16 +43,16 @@ module.exports = {
     //   lg: "0px 0px 32px 0px rgba(0, 0, 0, 0.25)",
     // },
     boxShadow: {
-      header: "0px 8px 32px 0px rgba(0 0 0 / 0.5)"
+      header: "0px 8px 32px 0px rgba(0 0 0 / 0.5)",
     },
     extend: {
       zIndex: {
-        '1': '10',
-        '2': '20',
-        '3': '30',
-        '4': '40',
-        '5': '50',
-      }
-    }
+        1: "10",
+        2: "20",
+        3: "30",
+        4: "40",
+        5: "50",
+      },
+    },
   },
 };

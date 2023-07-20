@@ -2,7 +2,7 @@ import React from "react";
 
 interface State {
   isTrue: boolean;
-  toggle: () => void
+  toggle: () => void;
 }
 
 interface LabelInterface {
@@ -16,12 +16,12 @@ interface ButtonInterface {
   style: string;
 }
 
- interface ProfileInterface {
+interface ProfileInterface {
   size: string;
-  picture_link: string | undefined
+  picture_link: string | undefined;
   // isTrue: boolean;
   // toggle: () => void;
-  }
+}
 
 interface LabelInterface {
   text: string;
@@ -35,13 +35,13 @@ interface ButtonInterface {
 }
 
 interface SubHeaderInterface {
-  	text_settings : string,
-	text_add : string,
-	title_1 : string,
-	title_path_1 : string,
-	title_2 : string,
-	title_path_2 : string,
-	title_3 : string,
+  text_settings: string;
+  text_add: string;
+  title_1: string;
+  title_path_1: string;
+  title_2: string;
+  title_path_2: string;
+  title_3: string;
 }
 interface SubHeaderTitleInterface {
 	title_1 : string,
@@ -71,12 +71,11 @@ interface NotificationsInterface {
 }
 
 interface RoomCardInterface {
-  room : string;
-  nb_sensor : number;
-  sensor_list: any ;
-  number_bg : number;
+  room: string;
+  nb_sensor: number;
+  sensor_list: any;
+  number_bg: number;
 }
-
 
 export type {
   State,
@@ -89,4 +88,4 @@ export type {
   RoomCardInterface,
   InputInterface,
   NotificationsInterface,
-}
+};
