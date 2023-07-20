@@ -66,6 +66,13 @@ interface RoomCardInterface {
   number_bg : number;
 }
 
+interface SensorInterface {
+  sensor_name : string;
+  alert : any;
+  data : any
+  settings : any
+}
+
 
 export type {
   State,
@@ -76,4 +83,5 @@ export type {
   RoomCardInterface,
   InputInterface,
   NotificationsInterface,
+  SensorInterface
 }
