@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import {BuildingCardInterface} from "interfaces";
-import BuildingCard from "./Cards/BuildingCard";
+import {BuildingCard} from "components";
 
 export default function HomeBody() {
 

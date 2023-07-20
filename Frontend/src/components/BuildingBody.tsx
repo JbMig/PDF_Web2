@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import {RoomCardInterface} from "interfaces";
-import RoomCard from "./Cards/RoomCard";
+import {RoomCard} from "components";
 
 export default function BuildingBody() {
 

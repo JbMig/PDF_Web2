@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import {SensorCardInterface} from "interfaces";
-import SensorCard from "./Cards/SensorCard";
+import {SensorCard} from "components";
 
 export default function RoomBody() {
 
