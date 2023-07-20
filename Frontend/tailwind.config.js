@@ -58,6 +58,20 @@ module.exports = {
         4: "40",
         5: "50",
       },
+	  backgroundImage: {
+        'yellow_card': "url('/src/assets/images/card_bg_yellow.svg')",
+        'galaxy_card': "url('/src/assets/images/card_bg_dark_grey.svg')",
+        'gray_card': "url('/src/assets/images/card_bg_light_grey.svg')",
+      },
+	  backgroundSize: {
+		'auto': 'auto',
+		'cover': 'cover',
+		'contain': 'contain',
+		'50': '50%',
+		'200': '200%',
+		'150': '150%',
+		'200': '200%',
+	  },
     },
   },
 };

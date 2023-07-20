@@ -26,17 +26,16 @@ export default function HomeBody() {
 		rooms_list : ["Bureau", "Salle de bain", "Séjour", "Cuisine", "Chambre", "Chambre d'amis"],
 		number_bg : 3,
     };
+	const card_list = [Card_1, Card_2, Card_3, Card_3, Card_1];
+
     let balise;
 
 	balise = 
 		<div className="w-full min-h-full bg-background py-lg px-base">
             <div className="grid grid-cols-3 gap-base">
-                <BuildingCard props={Card_1}/>
-                <BuildingCard props={Card_2}/>
-                <BuildingCard props={Card_3}/>
-                <BuildingCard props={Card_3}/>
-                <BuildingCard props={Card_1}/>
-                <BuildingCard props={Card_2}/>
+				{card_list.map(function(card) {
+					return (<BuildingCard props={card}/>)
+				})}
             </div>
 		</div>
 	

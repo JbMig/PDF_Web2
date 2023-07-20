@@ -9,34 +9,32 @@ export default function RoomBody() {
 	{
         sensor : "Température",
 		nb_data : 1,
-		data_list : "20,5°C",
+		data_list : ["20,5°C"],
 		number_bg : 1,
     };
     const Card_2 : SensorCardInterface = 
 	{
         sensor : "Humidité",
 		nb_data : 1,
-		data_list : "36%",
+		data_list : ["36%"],
 		number_bg : 2,
     };
     const Card_3 : SensorCardInterface = 
 	{
         sensor : "Fuite d'eau",
 		nb_data : 1,
-		data_list : "Pas de fuite détectée",
+		data_list : ["Pas de fuite détectée"],
 		number_bg : 3,
     };
+	const card_list = [Card_1, Card_2, Card_3, Card_1, Card_2];
     let balise;
 
 	balise = 
 		<div className="w-full min-h-full bg-background py-lg px-base">
             <div className="grid grid-cols-2 gap-base">
-                <SensorCard props={Card_1}/>
-                <SensorCard props={Card_2}/>
-                <SensorCard props={Card_3}/>
-                <SensorCard props={Card_1}/>
-                <SensorCard props={Card_2}/>
-                <SensorCard props={Card_3}/>
+				{card_list.map(function(card) {
+					return (<SensorCard props={card}/>)
+				})}
             </div>
 		</div>
 	

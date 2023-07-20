@@ -87,7 +87,7 @@ interface RoomCardInterface {
 interface SensorCardInterface {
   sensor : string;
   nb_data : number;
-  data_list: any ;
+  data_list: Array<string> ;
   number_bg : number;
 }
 
