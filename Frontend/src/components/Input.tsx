@@ -1,5 +1,5 @@
-import { InputInterface } from "interfaces";
-import React, { useState } from "react";
+import { InputInterface } from 'interfaces';
+import React, { useState } from 'react';
 
 export default function Input({
   type,
@@ -8,15 +8,16 @@ export default function Input({
   name,
   value,
   required,
+  autoComplete,
   onChange,
 }: InputInterface) {
-  if (type === "password" || type === "text" || type === "email") {
+  if (type === 'password' || type === 'text' || type === 'email') {
     return (
-      <label className={"font-satoshi text-base font-bold text-white"}>
+      <label className={'font-satoshi text-base font-bold text-white'}>
         {label}
         <input
           className={
-            "mt-[5px] w-full rounded-md border-2 border-gray bg-white p-sm font-normal text-black"
+            'font-normal mt-[5px] w-full rounded-md border-2 border-gray bg-white p-sm text-black'
           }
           type={type}
           placeholder={placeholder}
@@ -24,10 +25,11 @@ export default function Input({
           value={value}
           onChange={onChange}
           required={required}
+          autoComplete={autoComplete}
         />
       </label>
     );
-  } else if (type === "checkbox") {
+  } else if (type === 'checkbox') {
     const [checked, setChecked] = useState(false);
 
     const handleCheckboxChange = () => {
@@ -43,13 +45,13 @@ export default function Input({
     return (
       <label
         className={
-          "flex select-none items-center gap-[8px] font-satoshi text-base font-bold text-white"
+          'flex select-none items-center gap-[8px] font-satoshi text-base font-bold text-white'
         }
       >
         <input
           type={type}
           className={
-            "grid h-[16px] w-[16px] cursor-pointer select-none appearance-none place-content-center rounded-[4px] border-[2px] border-gray bg-white checked:border-0 checked:before:h-[11px] checked:before:w-[11px] checked:before:rounded-[2px] checked:before:bg-black"
+            'grid h-[16px] w-[16px] cursor-pointer select-none appearance-none place-content-center rounded-[4px] border-[2px] border-gray bg-white checked:border-0 checked:before:h-[11px] checked:before:w-[11px] checked:before:rounded-[2px] checked:before:bg-black'
           }
           name={name}
           checked={checked}
