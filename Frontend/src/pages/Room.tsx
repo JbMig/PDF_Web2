@@ -4,11 +4,11 @@ import { RoomBody, SideBarPopup, SubHeader, NotificationsPopup } from "../compon
 
 export default function Room() {
   const subHeaderProps: SubHeaderInterface = {
-    text_settings: "",
-    text_add: "Ajouter capteur",
-    title_1: "Nom du bâtiment",
-    title_path_1: "/Building",
-    title_2: "Nom de la pièce",
+    text_settings: '',
+    text_add: 'Ajouter capteur',
+    title_1: 'Nom du bâtiment',
+    title_path_1: '/Building',
+    title_2: 'Nom de la pièce',
   };
 
   let balise;

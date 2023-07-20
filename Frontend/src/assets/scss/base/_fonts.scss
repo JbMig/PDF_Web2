@@ -1,28 +1,28 @@
 // Icomoon
-$icomoon-font-path: "./assets/fonts/icons/";
-@import "../../fonts/icons/style";
+$icomoon-font-path: './assets/fonts/icons/';
+@import '../../fonts/icons/style';
 
 // Project fonts
 @include font-face(
-  "satoshi",
-  "./assets/fonts/Satoshi-Bold/Satoshi-Bold",
+  'satoshi',
+  './assets/fonts/Satoshi-Bold/Satoshi-Bold',
   700,
   null,
   eot woff2 woff ttf
 );
 @include font-face(
-  "satoshi",
-  "./assets/fonts/Satoshi-Medium/Satoshi-Medium",
+  'satoshi',
+  './assets/fonts/Satoshi-Medium/Satoshi-Medium',
   500,
   null,
   eot woff2 woff ttf
 );
 @include font-face(
-  "satoshi",
-  "./assets/fonts/Satoshi-Regular/Satoshi-Regular",
+  'satoshi',
+  './assets/fonts/Satoshi-Regular/Satoshi-Regular',
   400,
   null,
   eot woff2 woff ttf
 );
 
-$satoshi: "satoshi", sans-serif;
+$satoshi: 'satoshi', sans-serif;

@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { NotificationsInterface } from "interfaces";
+import React, { Fragment } from 'react';
+import { NotificationsInterface } from 'interfaces';
 
 export default function Notifications({
   props,

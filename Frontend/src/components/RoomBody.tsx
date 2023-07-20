@@ -1,6 +1,6 @@
-import React from "react";
-import {SensorCardInterface} from "interfaces";
-import {SensorCard} from "components";
+import React from 'react';
+import { SensorCardInterface } from 'interfaces';
+import { SensorCard } from 'components';
 
 export default function RoomBody() {
     const Card_1 : SensorCardInterface = 

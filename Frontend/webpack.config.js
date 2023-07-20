@@ -1,20 +1,20 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 // const BundleAnalyzerPlugin =
 //   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = (env, options) => {
-  const isProduction = options.mode === "production";
+  const isProduction = options.mode === 'production';
 
   return {
-    entry: path.join(__dirname, "src", "index.tsx"),
+    entry: path.join(__dirname, 'src', 'index.tsx'),
     output: {
-      path: path.resolve(__dirname, "dist"),
-      publicPath: "/",
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: '/',
     },
     stats: {
       errors: true,
@@ -25,8 +25,8 @@ module.exports = (env, options) => {
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, "public", "index.html"),
-        favicon: path.join(__dirname, "public", "favicon.ico"),
+        template: path.join(__dirname, 'public', 'index.html'),
+        favicon: path.join(__dirname, 'public', 'favicon.ico'),
       }),
       isProduction && new MiniCssExtractPlugin(),
       // new BundleAnalyzerPlugin(),
@@ -37,30 +37,30 @@ module.exports = (env, options) => {
         {
           test: /\.?(js|jsx|ts|tsx)$/,
           exclude: /node_modules/,
-          use: ["thread-loader", "babel-loader"],
+          use: ['thread-loader', 'babel-loader'],
         },
         {
           test: /\.?(css|scss)$/,
           use: [
-            isProduction ? MiniCssExtractPlugin.loader : "style-loader",
+            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: { importLoaders: 2, sourceMap: true },
             },
-            "postcss-loader",
-            { loader: "sass-loader", options: { sourceMap: true } },
+            'postcss-loader',
+            { loader: 'sass-loader', options: { sourceMap: true } },
           ],
         },
         {
           test: /\.?(png|jpg|svg)$/,
-          type: "asset",
+          type: 'asset',
         },
       ],
     },
 
     devServer: {
       historyApiFallback: true,
-      port: "auto",
+      port: 'auto',
       open: false,
       client: {
         overlay: {
@@ -90,10 +90,10 @@ module.exports = (env, options) => {
     },
 
     resolve: {
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
       plugins: [
         new TsconfigPathsPlugin({
-          configFile: path.resolve(__dirname, "tsconfig.json"),
+          configFile: path.resolve(__dirname, 'tsconfig.json'),
         }),
       ],
     },
