@@ -20,7 +20,7 @@ export default function Building() {
     balise = 
 		<section className="bg-background">
 			<SubHeader props={subHeaderProps}/>
-			<nav>
+			<nav className="bg-black">
 				<ul>
 					<li>
 						<Link to="/Room" className="font-sans font-bold text-white">Test page Pièce</Link>

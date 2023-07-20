@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
-import { NotificationsInterface, ProfileInterface } from '../interfaces'
-import { Notifications, Profile, Button } from "components";
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { NotificationsInterface, ProfileInterface } from 'interfaces';
+import { Notifications, Profile } from 'components';
 
 export default function Header() {
   const bellButton: NotificationsInterface = {
@@ -9,7 +9,7 @@ export default function Header() {
   };
 
   const profilePicture: ProfileInterface = {
-    size: "small",
+    size: 'small',
     picture_link: undefined,
     // isTrue: true,
     // toggle:(),
@@ -17,24 +17,22 @@ export default function Header() {
 
   let balise;
 
-	balise = 
-		<div className="flex">
-			<div className="bg-background py-lg px-base shadow-header flex w-full fixed">
+  balise = (
+    <div className="fixed z-1 flex w-full bg-background px-base py-lg shadow-header">
+      <div className="flex-1">
+        <Link
+          to="/"
+          className="font-sans hover:text-text_yellow self-center text-title font-bold text-white"
+        >
+          Nom de l'appli
+        </Link>
+      </div>
+      <div className="flex flex-row space-x-xxl self-center">
+        <Notifications props={bellButton} />
+        <Profile props={profilePicture} />
+      </div>
+    </div>
+  );
 
-				<div className="flex-1">
-					<Link to="/" className="text-title font-sans font-bold text-white self-center hover:text-text_yellow">Nom de l'appli</Link>
-				</div>
-				<div className="space-x-xxl flex-row self-center flex">
-          <Notifications props={bellButton} />
-					<Profile props={profilePicture}/>
-				</div>
-
-			</div>
-		</div>
-		
-	return (
-		<Fragment>
-			{balise}
-		</Fragment>
-	);
+  return <Fragment>{balise}</Fragment>;
 }

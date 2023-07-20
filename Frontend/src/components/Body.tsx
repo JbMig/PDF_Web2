@@ -4,8 +4,7 @@ import RoomCard from "./Cards/RoomCard";
 import Sensor from "./Sensor";
 
 export default function Body() {
-
-    // répéter la const et l'ajout dans la div autant de fois qu'il y a de piece dans le batiment ou autre moyen
+  
     const Sensor_n : SensorInterface = 
 	{
         sensor_name : "Température",
@@ -40,9 +39,7 @@ export default function Body() {
             */}
             <Sensor props={Sensor_2} />
             <Sensor props={Sensor_n} />
-            <Sensor props={Sensor_3} />
-
-            
+            <Sensor props={Sensor_3} />            
 		</div>
 	
   	return (
