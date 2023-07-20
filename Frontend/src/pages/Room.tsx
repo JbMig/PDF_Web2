@@ -9,8 +9,6 @@ export default function Room() {
     title_1: "Nom du bâtiment",
     title_path_1: "/Building",
     title_2: "Nom de la pièce",
-    title_path_2: "",
-    title_3: "",
   };
 
   let balise;
