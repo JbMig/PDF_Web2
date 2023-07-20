@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
-import { SideBarPopup, SubHeader} from "components";
+import { SideBarPopup, SubHeader, HomeBody} from "components";
 import {SubHeaderInterface,} from "interfaces";
-import Body from "components/Body";
 
 export default function Home() {
   const subHeaderProps: SubHeaderInterface = {
@@ -18,7 +17,7 @@ export default function Home() {
     <Fragment>
       <SubHeader props={subHeaderProps} />
       <SideBarPopup />
-      <Body />
+      <HomeBody />
     </Fragment>
   );
 }

@@ -70,11 +70,25 @@ interface NotificationsInterface {
   open: boolean;
 }
 
+interface BuildingCardInterface {
+  building : string;
+  nb_rooms : number;
+  rooms_list: Array<string> ;
+  number_bg : number;
+}
+
 interface RoomCardInterface {
-  room: string;
-  nb_sensor: number;
-  sensor_list: any;
-  number_bg: number;
+  room : string;
+  nb_sensor : number;
+  sensor_list: Array<string> ;
+  number_bg : number;
+}
+
+interface SensorCardInterface {
+  sensor : string;
+  nb_data : number;
+  data_list: Array<string> ;
+  number_bg : number;
 }
 
 interface SensorInterface {
@@ -97,7 +111,9 @@ export type {
   SubHeaderInterface,
   SubHeaderTitleInterface,
   SubHeaderButtonsInterface,
+  BuildingCardInterface,
   RoomCardInterface,
+  SensorCardInterface,
   InputInterface,
   NotificationsInterface,
   SensorInterface,
