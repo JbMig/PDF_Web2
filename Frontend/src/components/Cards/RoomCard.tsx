@@ -9,7 +9,6 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
 		balise = (
 			<div className="">
 				<div className="w-room_card rounded-xl bg-yellow_card bg-150 bg-top p-lg">
-					<input type="checkbox"/> 
 					<div className="text-xl font-medium">
 						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-white">
 							{props.room}
@@ -28,7 +27,6 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
 		balise = (
 			<div tabIndex={0} className="">
 				<div className="w-room_card rounded-xl text-white p-lg bg-galaxy_card">
-					<input type="checkbox" /> 
 					<div className="text-xl font-medium">
 						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-main_yellow">
 							{props.room}
@@ -48,7 +46,6 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
 		balise = (
 			<div className="">
 				<div className="w-room_card rounded-xl bg-gray_card bg-150 bg-top p-lg">
-					<input type="checkbox"/> 
 					<div className="text-xl font-medium p-none">
 						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-main_yellow">
 							{props.room}
