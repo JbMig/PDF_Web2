@@ -1,7 +1,7 @@
 html,
 body {
   overflow-x: hidden;
-  min-height: 100vh;
+  height: 100%;
 }
 
 html {
@@ -14,10 +14,6 @@ body {
   font-family: $satoshi;
 }
 
-html,
-body,
 main {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+  min-height: 100%;
 }
