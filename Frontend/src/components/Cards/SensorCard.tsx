@@ -1,16 +1,33 @@
 import React, { Fragment } from "react";
-import { ChangeSettingsPopupInterface, SensorInterface } from "interfaces";
+import { ChangeSettingsPopupInterface, SensorCardInterface } from "interfaces";
 import ChangeSettings from "../Popups/ChangeSettings";
 
 
+export default function SensorCard({ props }: { props: SensorCardInterface }) {
+	function cardStyleClass() {
+		let styleClass;
+		if (props.number_bg === 1) {
+			styleClass = "rounded-xl bg-yellow_card text-black bg-150 bg-top p-lg";
+		}
+		else if (props.number_bg === 2) {
+			styleClass = "rounded-xl bg-galaxy_card text-white p-lg";
+		}
+		else {
+			styleClass = "rounded-xl bg-gray_card text-black bg-150 bg-top p-lg";
+		}
+		return styleClass;
+	}
 
-export default function Sensor({ props }: { props: SensorInterface }) {
-
-    function sensorAlert() {
-        if (props.alert == true) {
-            let alertMessage = "Problème détecté"
-            return alertMessage;
-        }
+	function sensorAlert() {
+		let alert_tag;
+		if(props.alert){
+			alert_tag=(
+				<p className="text-base text-red font-bold pt-lg">ALERTE DÉTECTÉE !</p>
+			);
+		} else {
+			alert_tag = <></>;
+		}
+		return alert_tag;
     }
 
     let settings = props.settings;
@@ -22,34 +39,107 @@ export default function Sensor({ props }: { props: SensorInterface }) {
 
     function sensorData() {
         if (props.data != null) {
-            return (
-                <div>
-                    <p className="text-gray text-base font-bold">data : {props.data}</p>
-                    {/* faire lien vers pop up pour modifier settings */}
-                    <p className="text-gray text-base font-bold">settings : <span className="text-main_yellow hover:underline"><ChangeSettings props={ChangeSetting}/></span> </p>
-                </div>
-            ) ;
+			if(props.settings !== "")
+			{
+				return (
+					<div className="border-t p-none gap-sm">
+						{sensorAlert()}
+						<div className="pt-lg grid grid-cols-2 gap-sm">
+							<p className="text-base font-medium">Valeur actuelle : {props.data}</p>
+							<p className="text-base font-medium">Valeur cible : <span className="hover:underline font-bold"><ChangeSettings props={ChangeSetting}/></span> </p>
+						</div>
+					</div>
+				) ;
+			} else {
+				return (
+					<div className="border-t grid grid-cols-2 p-none gap-sm">
+						{sensorAlert()}
+						<div className="pt-lg gap-sm">
+							<p className="text-base font-medium">{props.data}</p>
+						</div>
+					</div>
+				) ;
+			}
         }
     }
 
-    let balise;
 
-    balise = (
-        <div className="bg-gray_border px-xl py-md rounded-xl mb-lg">
-            <div className="flex ">
+	let balise;
 
-                <p className="text-medium text-white flex-1 font-bold">{props.sensor_name}</p>
-                <p className="text-base text-red self-center font-bold">{sensorAlert()}</p>
-                
-            </div>
-            {sensorData()}
-        </div>
-    );
+	balise =(
+		<div className={cardStyleClass()}>
+			<div className="text-xl font-medium mb-md">
+				<p className="font-sans self-center text-medium font-bold">
+					{props.sensor_name}
+				</p>
+			</div>
+			{sensorData()}
+		</div>
+	)
 
-    return (
-        <Fragment>  
-            {balise}
-        </Fragment>
-    );
-
+	return (
+		<Fragment>
+			{balise}
+		</Fragment>
+	);
 }
+
+
+
+// ////////////////// Carte jaune //////////////////
+
+// balise = (
+// 	<div className="">
+// 		<div className="w-sensor_card rounded-xl bg-yellow_card bg-150 bg-top p-lg">
+// 			<div className="text-xl font-medium">
+// 				<p className="font-sans self-center text-medium font-bold hover:text-white">
+// 					{props.sensor_name}
+// 				</p>
+// 			</div>
+// 			<div className="border-t p-none grid grid-cols-2 gap-sm"> 
+// 				<p className="pt-lg">{props.data}</p>
+// 			</div>
+// 		</div>
+// 	</div>
+// );
+
+// ////////////////// Carte galaxie //////////////////
+// balise = (
+// 	<div tabIndex={0} className="">
+// 		<div className="w-sensor_card rounded-xl text-white p-lg bg-galaxy_card">
+// 			<input type="checkbox" /> 
+// 			<div className="text-xl font-medium">
+// 				<Link to="/Sensor" className="font-sans self-center text-medium font-bold hover:text-main_yellow">
+// 					{props.sensor}
+// 				</Link>
+// 				<p className="mb-md">{props.nb_data} données</p>	
+// 			</div>
+// 			<div className="border-t p-none grid grid-cols-2 gap-sm"> 
+// 				{props.data_list.map(function(data) {
+// 					return (<p className="pt-lg">{data}</p>)
+// 				})}
+// 			</div>
+// 		</div>
+// 	</div>
+// );
+
+// ////////////////// Carte grise //////////////////
+// balise = (
+// 	<div className="">
+// 		<div className="w-sensor_card rounded-xl bg-gray_card bg-150 bg-top p-lg">
+// 			<input type="checkbox"/> 
+// 			<div className="text-xl font-medium p-none">
+// 				<Link to="/Sensor" className="font-sans self-center text-medium font-bold hover:text-main_yellow">
+// 					{props.sensor}
+// 				</Link>
+// 				<p className="mb-md">{props.nb_data} données</p>
+					
+// 			</div>
+// 			<div className="border-t p-none grid grid-cols-2 gap-sm"> 
+// 				{props.data_list.map(function(data) {
+// 					return (<p className="pt-lg">{data}</p>)
+// 				})}
+// 			</div>
+// 		</div>
+// 	</div>
+// );

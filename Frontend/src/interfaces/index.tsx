@@ -85,17 +85,11 @@ interface RoomCardInterface {
 }
 
 interface SensorCardInterface {
-  sensor : string;
-  nb_data : number;
-  data_list: Array<string> ;
-  number_bg : number;
-}
-
-interface SensorInterface {
-  sensor_name : string;
-  alert : any;
-  data : any
-  settings : any
+	sensor_name : string;
+  	data: string ;
+	settings: string;
+  	number_bg : number;
+	alert : boolean;
 }
 
 interface ChangeSettingsPopupInterface {
@@ -116,6 +110,5 @@ export type {
   SensorCardInterface,
   InputInterface,
   NotificationsInterface,
-  SensorInterface,
   ChangeSettingsPopupInterface
 }

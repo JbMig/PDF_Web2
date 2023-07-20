@@ -1,37 +1,45 @@
 import React, { Fragment } from "react";
-import {SensorCardInterface, SensorInterface} from "interfaces";
+import {SensorCardInterface} from "interfaces";
 import {SensorCard} from "components";
 
+// sensor_name : string;
+// data: string ;
+// settings: any;
+// number_bg : number;
+// alert : any;
 export default function RoomBody() {
-    const Sensor_1 : SensorInterface = 
+
+    // répéter la const et l'ajout dans la div autant de fois qu'il y a de capteurs dans la pièce ou autre moyen
+    const Card_1 : SensorCardInterface = 
 	{
         sensor_name : "Température",
-        alert : false,
-        data : "17°C" ,
-        settings : "18°C",
+		data : "20,5°C",
+		settings : "19°C",
+		alert : false,
+		number_bg : 1,
     };
-
-    const Sensor_2 : SensorInterface = 
+    const Card_2 : SensorCardInterface = 
 	{
-        sensor_name : "Détecteur de fuite",
-        alert : false,
-        data : undefined ,
-        settings : undefined,
+        sensor_name : "Humidité",
+		data : "36%",
+		settings : "20%",
+		alert : false,
+		number_bg : 2,
     };
-    
-    const Sensor_3 : SensorInterface = 
+    const Card_3 : SensorCardInterface = 
 	{
-        sensor_name : "Détecteur de fumée",
-        alert : true,
-        data : undefined ,
-        settings : undefined,
+        sensor_name : "Fuite d'eau",
+		data : "Fuite au niveau du lave-vaisselle",
+		settings : "",
+		alert : true,
+		number_bg : 3,
     };
-	const card_list = [Sensor_1, Sensor_2, Sensor_3];
+	const card_list = [Card_1, Card_2, Card_3, Card_1, Card_2];
     let balise;
 
 	balise = 
 		<div className="w-full min-h-full bg-background py-lg px-base">
-            <div className="grid grid-cols-1">
+            <div className="grid grid-cols-2 gap-base">
 				{card_list.map(function(card) {
 					return (<SensorCard props={card}/>)
 				})}

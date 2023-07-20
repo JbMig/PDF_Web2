@@ -3,65 +3,40 @@ import { Link } from "react-router-dom";
 import { RoomCardInterface } from "interfaces";
 
 export default function RoomCard({ props }: { props: RoomCardInterface }) {
-  let balise;
-
-	if (props.number_bg == 1) {
-		balise = (
-			<div className="">
-				<div className="w-room_card rounded-xl bg-yellow_card bg-150 bg-top p-lg">
-					<div className="text-xl font-medium">
-						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-white">
-							{props.room}
-						</Link>
-						<p className="mb-md">{props.nb_sensor} capteurs</p>
-					</div>
-					<div className="border-t p-none grid grid-cols-2 gap-sm"> 
-						{props.sensor_list.map(function(sensor) {
-							return (<p className="pt-lg">{sensor}</p>)
-						})}
-					</div>
-				</div>
-			</div>
-		);
-	} else if (props.number_bg == 2) {
-		balise = (
-			<div tabIndex={0} className="">
-				<div className="w-room_card rounded-xl text-white p-lg bg-galaxy_card">
-					<div className="text-xl font-medium">
-						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-main_yellow">
-							{props.room}
-						</Link>
-						<p className="mb-md">{props.nb_sensor} capteurs</p>
-							
-					</div>
-					<div className="border-t p-none grid grid-cols-2 gap-sm"> 
-						{props.sensor_list.map(function(sensor) {
-							return (<p className="pt-lg">{sensor}</p>)
-						})}
-					</div>
-				</div>
-			</div>
-		);
-	} else if (props.number_bg == 3) {
-		balise = (
-			<div className="">
-				<div className="w-room_card rounded-xl bg-gray_card bg-150 bg-top p-lg">
-					<div className="text-xl font-medium p-none">
-						<Link to="/Room" className="font-sans self-center text-xl font-bold hover:text-main_yellow">
-							{props.room}
-						</Link>
-						<p className="mb-md">{props.nb_sensor} capteurs</p>
-							
-					</div>
-					<div className="border-t p-none grid grid-cols-2 gap-sm"> 
-						{props.sensor_list.map(function(sensor) {
-							return (<p className="pt-lg">{sensor}</p>)
-						})}
-					</div>
-				</div>
-			</div>
-		);
+	function cardStyleClass() {
+		let bigDivClassName;
+		let smallDivClassName;
+		if (props.number_bg === 1) {
+			bigDivClassName = "rounded-xl bg-yellow_card text-black bg-150 bg-top p-lg";
+			smallDivClassName = "font-sans self-center text-xl font-bold hover:text-white";
+		}
+		else if (props.number_bg === 2) {
+			bigDivClassName = "rounded-xl bg-galaxy_card text-white p-lg";
+			smallDivClassName = "font-sans self-center text-xl font-bold hover:text-main_yellow";
+		}
+		else {
+			bigDivClassName = "rounded-xl bg-gray_card text-black bg-150 bg-top p-lg";
+			smallDivClassName = "font-sans self-center text-xl font-bold hover:text-white";
+		}
+		return {bigDivClassName:bigDivClassName,smallDivClassName:smallDivClassName};
 	}
+	
 
-  return <Fragment>{balise}</Fragment>;
+	return (
+		<div className="">
+			<div className={cardStyleClass().bigDivClassName}>
+				<div className="text-xl font-medium">
+					<Link to="/Room" className={cardStyleClass().smallDivClassName}>
+						{props.room}
+					</Link>
+					<p className="mb-md">{props.nb_sensor} capteurs</p>
+				</div>
+				<div className="border-t p-none grid grid-cols-2 gap-sm"> 
+					{props.sensor_list.map(function(sensor) {
+						return (<p className="pt-lg">{sensor}</p>)
+					})}
+				</div>
+			</div>
+		</div>
+	);
 }
