@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {SensorCardInterface} from "interfaces";
 import {SensorCard} from "components";
 
@@ -35,9 +35,8 @@ export default function RoomBody() {
 		number_bg : 3,
     };
 	const card_list = [Card_1, Card_2, Card_3, Card_1, Card_2];
-    let balise;
-
-	balise = 
+	
+  	return (
 		<div className="w-full min-h-full bg-background py-lg px-base">
             <div className="grid grid-cols-2 gap-base">
 				{card_list.map(function(card) {
@@ -45,11 +44,6 @@ export default function RoomBody() {
 				})}
             </div>
 		</div>
-	
-  	return (
-		<Fragment>
-			{balise}
-		</Fragment>  
 	);
 
 }
