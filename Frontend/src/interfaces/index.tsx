@@ -44,9 +44,9 @@ interface SubHeaderInterface {
   title_2: string;
 }
 interface SubHeaderTitleInterface {
-	title_1 : string,
-	title_path_1 : string,
-	title_2 : string,
+  title_1: string;
+  title_path_1: string;
+  title_2: string;
 }
 interface SubHeaderButtonsInterface {
   text_settings: string;
@@ -83,16 +83,16 @@ interface RoomCardInterface {
 }
 
 interface SensorCardInterface {
-	sensor_name : string;
-  	data: string ;
-	settings: string;
-  	number_bg : number;
-	alert : boolean;
+  sensor_name: string;
+  data: string;
+  settings: string;
+  number_bg: number;
+  alert: boolean;
 }
 
 interface ChangeSettingsPopupInterface {
   // id : number;
-  value : any;
+  value: any;
 }
 
 export type {
@@ -108,5 +108,5 @@ export type {
   SensorCardInterface,
   InputInterface,
   NotificationsInterface,
-  ChangeSettingsPopupInterface
-}
+  ChangeSettingsPopupInterface,
+};

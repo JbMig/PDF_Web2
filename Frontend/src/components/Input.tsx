@@ -62,7 +62,5 @@ export default function Input({
         {label}
       </label>
     );
-
   }
-
 }

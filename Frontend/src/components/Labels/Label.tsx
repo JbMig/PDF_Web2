@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { LabelInterface } from "interfaces";
+import React, { Fragment } from 'react';
+import { LabelInterface } from 'interfaces';
 
 export default function Label({ props }: { props: LabelInterface }) {
   function buttonContent() {
@@ -8,7 +8,7 @@ export default function Label({ props }: { props: LabelInterface }) {
 
   let balise;
 
-  if (props.style == "fill") {
+  if (props.style == 'fill') {
     balise = (
       <button
         className="
@@ -20,7 +20,7 @@ export default function Label({ props }: { props: LabelInterface }) {
         {buttonContent()}
       </button>
     );
-  } else if (props.style == "outline") {
+  } else if (props.style == 'outline') {
     balise = (
       <button
         className="
