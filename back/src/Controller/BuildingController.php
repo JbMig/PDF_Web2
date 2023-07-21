@@ -13,11 +13,13 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\Persistence\ManagerRegistry;
 
+#[Route('/api', name: "api_")]
 class BuildingController extends AbstractController
 {
-    #[Route('/building', name: 'index')]
-    public function index(EntityManagerInterface $entityManager, Security $security): Response
+    #[Route('/building', name: 'index', methods:['get'])]
+    public function index(EntityManagerInterface $entityManager, Security $security): JsonResponse
     {
         $repository = $entityManager->getRepository(Buildings::class);
         $user = $security->getUser();
@@ -38,46 +40,46 @@ class BuildingController extends AbstractController
         }
     }
 
-    #[Route('/building/{id}', name: 'show')]
-    public function show(EntityManagerInterface $entityManager, Security $security, int $id): Response
-    {
-        $user = $security->getUser();
-        if ($user) {
-            $building_repository = $entityManager->getRepository(Buildings::class);
-            $room_repository = $entityManager->getRepository(Rooms::class);
-            $building = $building_repository->find($id);
-            $rooms = $room_repository->findBy(array('building_id' => $building));
+//    #[Route('/building/{id}', name: 'show', methods: ['get'])]
+//    public function show(EntityManagerInterface $entityManager, Security $security, int $id): Response
+//    {
+//        $user = $security->getUser();
+//        if ($user) {
+//            $building_repository = $entityManager->getRepository(Buildings::class);
+//            $room_repository = $entityManager->getRepository(Rooms::class);
+//            $building = $building_repository->find($id);
+//            $rooms = $room_repository->findBy(array('building_id' => $building));
+//
+//            $data = [
+//                'user' => $user,
+//                'building' => $building,
+//                'rooms' => $rooms,
+//                "response" => "success"
+//            ];
+//
+//            return new JsonResponse($data);
+//        } else {
+//            return new JsonResponse([
+//                "response" => "error"
+//            ]);
+//        }
+//    }
 
-            $data = [
-                'user' => $user,
-                'building' => $building,
-                'rooms' => $rooms,
-                "response" => "success"
-            ];
-
-            return new JsonResponse($data);
-        } else {
-            return new JsonResponse([
-                "response" => "error"
-            ]);
-        }
-    }
-
-    #[Route('/building/new', name: 'new_building')]
-    public function new(EntityManagerInterface $entityManager, Security $security): Response
+    #[Route('/building/new', name: 'new_building', methods: ['post'])]
+    public function new(EntityManagerInterface $entityManager): JsonResponse
     {
         // $user = $security->getUser();
         // if ($user) {
             $building_type = ["logement", "lieux de travail"];
-            return new JsonResponse([
+            return $this->json([
                 'building_type' => $building_type,
                 'response' => 'success'
             ]);
     // }
         // else{
-            return new JsonResponse([
-                'response' => 'error'
-            ]);
+           // return new JsonResponse([
+             //   'response' => 'error'
+            //]);
         // }
     }
 
@@ -106,7 +108,7 @@ class BuildingController extends AbstractController
 
     }
 
-    #[Route('/building/{id}/edit', name: 'edit_building')]
+    #[Route('/building/{id}/edit', name: 'edit_building', methods:['get'])]
     public function edit(EntityManagerInterface $entityManager, Security $security, int $id): Response
     {
         $user = $security->getUser();
@@ -131,7 +133,7 @@ class BuildingController extends AbstractController
         }
     }
 
-    #[Route('/building/{id}/update', name: 'update_building', methods: ['POST'])]
+    #[Route('/building/{id}/update', name: 'update_building', methods: ['put'])]
     public function update(EntityManagerInterface $entityManager, Request $request, int $id): Response
     {
         $formData = json_decode($request->getContent(), true);
