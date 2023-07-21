@@ -1,0 +1,16 @@
+{
+    "require": {
+        "jms/serializer-bundle": "^5.3",
+        "friendsofsymfony/rest-bundle": "^3.5",
+        "symfony/orm-pack": "^2.3"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.50"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    }
+}

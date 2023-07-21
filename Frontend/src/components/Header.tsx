@@ -1,7 +1,17 @@
-import React, { Fragment } from 'react';
+import React, {Fragment, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { NotificationsInterface, ProfileInterface } from 'interfaces';
 import { Notifications, Profile } from 'components';
+
+
+
+    fetch(`api/building/new`, {
+        method: 'post',
+        mode: 'no-cors',
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }).then((data) => console.log(data.json()))
 
 export default function Header() {
   const bellButton: NotificationsInterface = {
@@ -24,7 +34,7 @@ export default function Header() {
           to="/"
           className="font-sans hover:text-text_yellow self-center text-title font-bold text-white"
         >
-          Nom de l'appli
+          IOSHI
         </Link>
       </div>
       <div className="flex flex-row space-x-xxl self-center">
