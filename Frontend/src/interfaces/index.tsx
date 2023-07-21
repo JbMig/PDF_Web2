@@ -73,6 +73,7 @@ interface BuildingCardInterface {
   nb_rooms: number;
   rooms_list: Array<string>;
   number_bg: number;
+  building_id:string;
 }
 
 interface RoomCardInterface {
@@ -94,6 +95,9 @@ interface ChangeSettingsPopupInterface {
   // id : number;
   value: any;
 }
+interface BodyInterface {
+  id : string | undefined;
+}
 
 export type {
   State,
@@ -109,4 +113,5 @@ export type {
   InputInterface,
   NotificationsInterface,
   ChangeSettingsPopupInterface,
+  BodyInterface,
 };

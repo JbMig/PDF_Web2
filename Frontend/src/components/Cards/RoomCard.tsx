@@ -25,7 +25,13 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
       smallDivClassName: smallDivClassName,
     };
   }
-
+  let sensors_text;
+  if(props.nb_sensor > 1){
+	sensors_text = (<p className="mb-md">{props.nb_sensor} capteurs</p>)
+  }
+  else{
+	sensors_text = (<p className="mb-md">{props.nb_sensor} capteur</p>)
+  }
   return (
     <div className="">
       <div className={cardStyleClass().bigDivClassName}>
@@ -33,7 +39,7 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
           <Link to="/Room" className={cardStyleClass().smallDivClassName}>
             {props.room}
           </Link>
-          <p className="mb-md">{props.nb_sensor} capteurs</p>
+          {sensors_text}
         </div>
         <div className="grid grid-cols-2 gap-sm border-t p-none">
           {props.sensor_list.map(function (sensor) {

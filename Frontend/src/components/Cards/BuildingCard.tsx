@@ -32,11 +32,12 @@ export default function BuildingCard({
     };
   }
 
+  const link = `/Building/${props.building_id}`
   return (
     <div className="">
       <div className={cardStyleClass().bigDivClassName}>
         <div className="text-xl font-medium">
-          <Link to="/Building" className={cardStyleClass().smallDivClassName}>
+          <Link to={link} className={cardStyleClass().smallDivClassName}>
             {props.building}
           </Link>
           <p className="mb-md">{props.nb_rooms} pièces</p>

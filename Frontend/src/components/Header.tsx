@@ -24,7 +24,7 @@ export default function Header() {
           to="/"
           className="font-sans hover:text-text_yellow self-center text-title font-bold text-white"
         >
-          Nom de l'appli
+          IOSHI
         </Link>
       </div>
       <div className="flex flex-row space-x-xxl self-center">

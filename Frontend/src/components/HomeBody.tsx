@@ -3,32 +3,34 @@ import { BuildingCardInterface } from 'interfaces';
 import { BuildingCard } from 'components';
 
 export default function HomeBody() {
-  const Card_1: BuildingCardInterface = {
-    building: 'Appart',
-    nb_rooms: 2,
-    rooms_list: ['Séjour', 'Salle de bain'],
-    number_bg: 1,
-  };
+	const Card_1: BuildingCardInterface = {
+	  building: 'Maison',
+	  nb_rooms: 5,
+	  rooms_list: [
+		"Séjour",
+		"Chambre",
+		"Salle de Bain",
+		"Cuisine",
+		"Bureau",
+	  ],
+	  number_bg: 3,
+	  building_id:"1",
+	};
   const Card_2: BuildingCardInterface = {
-    building: 'Travail',
-    nb_rooms: 4,
-    rooms_list: ['Bureau patron', 'Bureau RH', 'Infirmerie', 'Open space'],
-    number_bg: 2,
+    building: 'Appart',
+    nb_rooms: 3,
+    rooms_list: ["Séjour", "Chambre", "Salle de Bain"],
+    number_bg: 1,
+	building_id:"2",
   };
   const Card_3: BuildingCardInterface = {
-    building: 'Maison',
-    nb_rooms: 6,
-    rooms_list: [
-      'Bureau',
-      'Salle de bain',
-      'Séjour',
-      'Cuisine',
-      'Chambre',
-      "Chambre d'amis",
-    ],
-    number_bg: 3,
+    building: 'Travail',
+    nb_rooms: 4,
+    rooms_list: ["Open Space", "Bureau directeur", "Bureau RH", "Infirmerie"],
+    number_bg: 2,
+	building_id:"3",
   };
-  const card_list = [Card_1, Card_2, Card_3, Card_3, Card_1];
+  const card_list = [Card_1, Card_2, Card_3];
 
   return (
     <div className="min-h-full w-full bg-background px-base py-lg">
