@@ -5,7 +5,7 @@ import { Notifications, Profile } from 'components';
 
 
 
-    fetch(`api/building/new`, {
+    fetch(`http://backioshi.w2-groupe4.hetic-projects.arcplex.tech/api/building/new`, {
         method: 'post',
         mode: 'no-cors',
         headers: {
