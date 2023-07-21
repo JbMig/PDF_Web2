@@ -1,0 +1,6 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+        methods:  GET
+    type: attribute

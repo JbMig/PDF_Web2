@@ -1,0 +1,31 @@
+## Read the documentation: https://fosrestbundle.readthedocs.io/en/3.x/
+#fos_rest:
+##    param_fetcher_listener:  true
+##    allowed_methods_listener:  true
+##    routing_loader: false
+##    view:
+##        view_response_listener:  true
+##    exception:
+##        codes:
+##            App\Exception\MyException: 403
+##        messages:
+##            App\Exception\MyException: Forbidden area.
+#    format_listener:
+#        rules:
+#            - { path: ^/api/, priorities: [ html, json, xml ], fallback_format: ~, prefer_extension: true }
+#            - { path: '^/', priorities: [ 'html', '*/*' ], fallback_format: html, prefer_extension: true }
+fos_rest:
+    routing_loader: false
+    view:
+        view_response_listener: 'force'
+        formats:
+            json: true
+
+nelmio_cors:
+    defaults:
+        allow_origin: ['http://w2-groupe4.hetic-projects.arcplex.tech:8090'] # ou mettez l'URL exacte de votre frontend
+        allow_methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+        allow_headers: ['Content-Type', 'Authorization']
+        max_age: 3600
+    paths:
+        '^/': ~
