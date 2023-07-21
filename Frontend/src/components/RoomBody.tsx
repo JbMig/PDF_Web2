@@ -28,7 +28,7 @@ export default function RoomBody({ props }: { props: BodyInterface }) {
 			};
 			card_list = [Card_1];
 		}
-		else if (props.id === "3" || props.id === "8") {
+		else if (props.id === "3") {
 			const Card_1 : SensorCardInterface = 
 			{
 				sensor_name : "Température",
@@ -48,14 +48,41 @@ export default function RoomBody({ props }: { props: BodyInterface }) {
 			const Card_3 : SensorCardInterface = 
 			{
 				sensor_name : "fuite d'eau",
-				data : "Pas de fuite détecté",
+				data : "Pas de fuite détectée",
 				settings : "",
 				alert : false,
 				number_bg : 3,
 			};
 			card_list = [Card_1, Card_2, Card_3];
 		}
-		else if (props.id === "4" || props.id === "6") {
+		else if (props.id === "8") {
+			const Card_1 : SensorCardInterface = 
+			{
+				sensor_name : "Température",
+				data : "20,5°C",
+				settings : "22°C",
+				alert : false,
+				number_bg : 1,
+			};
+			const Card_2 : SensorCardInterface = 
+			{
+				sensor_name : "humidité",
+				data : "45%",
+				settings : "30%",
+				alert : false,
+				number_bg : 2,
+			};
+			const Card_3 : SensorCardInterface = 
+			{
+				sensor_name : "fuite d'eau",
+				data : "Fuite d'eau détectée !",
+				settings : "",
+				alert : true,
+				number_bg : 3,
+			};
+			card_list = [Card_1, Card_2, Card_3];
+		}
+		else if (props.id === "4") {
 			const Card_1 : SensorCardInterface = 
 			{
 				sensor_name : "Température",
@@ -67,9 +94,44 @@ export default function RoomBody({ props }: { props: BodyInterface }) {
 			const Card_2 : SensorCardInterface = 
 			{
 				sensor_name : "fuite d'eau",
-				data : "",
+				data : "Pas de fuite détectée",
+				settings : "",
+				alert : false,
+				number_bg : 2,
+			};
+			const Card_3 : SensorCardInterface = 
+			{
+				sensor_name : "fumée",
+				data : "Fumée détectée !",
 				settings : "",
 				alert : true,
+				number_bg : 3,
+			};
+			const Card_4 : SensorCardInterface = 
+			{
+				sensor_name : "CO2",
+				data : "Taux de CO2 anormal !",
+				settings : "",
+				alert : true,
+				number_bg : 1,
+			};
+			card_list = [Card_1, Card_2, Card_3, Card_4];
+		}
+		else if (props.id === "6") {
+			const Card_1 : SensorCardInterface = 
+			{
+				sensor_name : "Température",
+				data : "20,5°C",
+				settings : "22°C",
+				alert : false,
+				number_bg : 1,
+			};
+			const Card_2 : SensorCardInterface = 
+			{
+				sensor_name : "fuite d'eau",
+				data : "Pas de fuite détectée",
+				settings : "",
+				alert : false,
 				number_bg : 2,
 			};
 			const Card_3 : SensorCardInterface = 

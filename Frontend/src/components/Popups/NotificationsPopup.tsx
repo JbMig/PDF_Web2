@@ -13,17 +13,17 @@ export default function NotificationsPopup() {
 		{
 			room_name : "Salle de Bain",
 			text : "Fuite d'eau détectée !",
-			link : "/Room",
+			link : "/Room/8",
 		},
 		{
 			room_name : "Cuisine",
 			text : "Fumée détectée !",
-			link : "/Room",
+			link : "/Room/4",
 		},
 		{
 			room_name : "Cuisine",
 			text : "Taux de CO2 anormal !",
-			link : "/Room",
+			link : "/Room/4",
 		},
 	];
 
