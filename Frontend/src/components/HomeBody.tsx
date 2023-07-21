@@ -4,7 +4,7 @@ import { BuildingCard } from 'components';
 
 export default function HomeBody() {
 	const Card_1: BuildingCardInterface = {
-	  building: 'Maison',
+		building_name: 'Maison',
 	  nb_rooms: 5,
 	  rooms_list: [
 		"Séjour",
@@ -17,14 +17,14 @@ export default function HomeBody() {
 	  building_id:"1",
 	};
   const Card_2: BuildingCardInterface = {
-    building: 'Appart',
+    building_name: 'Appart',
     nb_rooms: 3,
     rooms_list: ["Séjour", "Chambre", "Salle de Bain"],
     number_bg: 1,
 	building_id:"2",
   };
   const Card_3: BuildingCardInterface = {
-    building: 'Travail',
+    building_name: 'Travail',
     nb_rooms: 4,
     rooms_list: ["Open Space", "Bureau directeur", "Bureau RH", "Infirmerie"],
     number_bg: 2,

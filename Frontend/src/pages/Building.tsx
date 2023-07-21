@@ -4,7 +4,7 @@ import { BuildingBody, SideBarPopup, SubHeader, NotificationsPopup } from "compo
 import { useParams } from "react-router-dom";
 
 export default function Building() {
-	const param = useParams(); // ce param est censé récupérer l'id
+	const param = useParams();
 	const building_id : BodyInterface = {id : param.id};
 	function buildingNameById() {
 		let name;

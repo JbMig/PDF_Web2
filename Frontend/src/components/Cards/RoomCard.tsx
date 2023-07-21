@@ -32,12 +32,13 @@ export default function RoomCard({ props }: { props: RoomCardInterface }) {
   else{
 	sensors_text = (<p className="mb-md">{props.nb_sensor} capteur</p>)
   }
+  const link = `/Room/${props.room_id}`
   return (
     <div className="">
       <div className={cardStyleClass().bigDivClassName}>
         <div className="text-xl font-medium">
-          <Link to="/Room" className={cardStyleClass().smallDivClassName}>
-            {props.room}
+          <Link to={link} className={cardStyleClass().smallDivClassName}>
+            {props.room_name}
           </Link>
           {sensors_text}
         </div>

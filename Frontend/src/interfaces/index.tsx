@@ -69,18 +69,19 @@ interface NotificationsInterface {
 }
 
 interface BuildingCardInterface {
-  building: string;
+  building_name: string;
   nb_rooms: number;
   rooms_list: Array<string>;
   number_bg: number;
-  building_id:string;
+  building_id:string | undefined;
 }
 
 interface RoomCardInterface {
-  room: string;
+  room_name: string;
   nb_sensor: number;
   sensor_list: Array<string>;
   number_bg: number;
+  room_id:string | undefined;
 }
 
 interface SensorCardInterface {

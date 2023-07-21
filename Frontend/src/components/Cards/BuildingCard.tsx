@@ -38,13 +38,13 @@ export default function BuildingCard({
       <div className={cardStyleClass().bigDivClassName}>
         <div className="text-xl font-medium">
           <Link to={link} className={cardStyleClass().smallDivClassName}>
-            {props.building}
+            {props.building_name}
           </Link>
           <p className="mb-md">{props.nb_rooms} pièces</p>
         </div>
         <div className="grid grid-cols-2 gap-sm border-t p-none">
-          {props.rooms_list.map(function (room) {
-            return <p className="pt-lg">{room}</p>;
+          {props.rooms_list.map(function (room_name) {
+            return <p className="pt-lg">{room_name}</p>;
           })}
         </div>
       </div>

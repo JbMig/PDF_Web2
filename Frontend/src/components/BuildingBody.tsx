@@ -8,82 +8,94 @@ export default function BuildingBody({ props }: { props: BodyInterface }) {
 		let card_list;
 		if (props.id === "1") {				//Maison
 			const Card_1: RoomCardInterface = {
-				room: 'Séjour',
+				room_name: "Séjour",
 				nb_sensor: 1,
-				sensor_list: ['température'],
+				sensor_list: ["température"],
 				number_bg: 1,
+	  			room_id:"1",
 			};
 			const Card_2: RoomCardInterface = {
-				room: "Chambre",
+				room_name: "Chambre",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 2,
+	  			room_id:"2",
 			};
 			const Card_3: RoomCardInterface = {
-				room: "Salle de Bain",
+				room_name: "Salle de Bain",
 				nb_sensor: 3,
 				sensor_list: ["température", "humidité", "fuite d'eau"],
 				number_bg: 3,
+	  			room_id:"3",
 			};
 			const Card_4: RoomCardInterface = {
-				room: "Cuisine",
+				room_name: "Cuisine",
 				nb_sensor: 4,
 				sensor_list: ["température", "fuite d'eau", "Fumée", "CO2"],
 				number_bg: 1,
+	  			room_id:"4",
 			};
 			const Card_5: RoomCardInterface = {
-				room: "Bureau",
+				room_name: "Bureau",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 2,
+	  			room_id:"5",
 			};
 			card_list = [Card_1, Card_2, Card_3, Card_4, Card_5];
 		}
 		else if (props.id === "2") {				//Appart
 			const Card_1: RoomCardInterface = {
-				room: "Séjour",
+				room_name: "Séjour",
 				nb_sensor: 4,
 				sensor_list: ["température", "fuite d'eau", "Fumée", "CO2"],
 				number_bg: 1,
+	  			room_id:"6",
 			};
 			const Card_2: RoomCardInterface = {
-				room: "Chambre",
+				room_name: "Chambre",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 2,
+	  			room_id:"7",
 			};
 			const Card_3: RoomCardInterface = {
-				room: "Salle de Bain",
+				room_name: "Salle de Bain",
 				nb_sensor: 2,
 				sensor_list: ["température", "humidité"],
 				number_bg: 3,
+	  			room_id:"8",
 			};
 			card_list = [Card_1, Card_2, Card_3];
 		}
 		else {											//Boulot
 			const Card_1: RoomCardInterface = {
-				room: "Open Space",
+				room_name: "Open Space",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 1,
+	  			room_id:"9",
 			};
 			const Card_2: RoomCardInterface = {
-				room: "Bureau directeur",
+				room_name: "Bureau directeur",
 				nb_sensor: 2,
 				sensor_list: ["température"],
 				number_bg: 2,
+	  			room_id:"10",
 			};
 			const Card_3: RoomCardInterface = {
-				room: "Bureau RH",
+				room_name: "Bureau RH",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 3,
+	  			room_id:"11",
 			};
 			const Card_4: RoomCardInterface = {
-				room: "Infirmerie",
+				room_name: "Infirmerie",
 				nb_sensor: 1,
 				sensor_list: ["température"],
 				number_bg: 1,
+	  			room_id:"12",
 			};
 			card_list = [Card_1, Card_2, Card_3, Card_4];
 		}

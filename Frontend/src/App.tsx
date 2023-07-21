@@ -18,7 +18,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path={'*'} element={<NoMatch />} />
         <Route path={'/Building/:id'} element={<Building />} />
-        <Route path={'/Room'} element={<Room />} />
+        <Route path={'/Room/:id'} element={<Room />} />
       </Route>
       <Route path={'/profile'} element={<Profile />} />
       <Route path={'/login'} element={<Login />} />
