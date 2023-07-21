@@ -72,7 +72,7 @@ export default function Room() {
 			<SubHeader props={subHeaderProps}/>
 			<SideBarPopup />
 			<NotificationsPopup />
-			<RoomBody />
+			<RoomBody props={room_id}/>
 		</section>
 	)
 	

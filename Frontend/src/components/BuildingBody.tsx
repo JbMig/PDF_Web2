@@ -31,7 +31,7 @@ export default function BuildingBody({ props }: { props: BodyInterface }) {
 			const Card_4: RoomCardInterface = {
 				room_name: "Cuisine",
 				nb_sensor: 4,
-				sensor_list: ["température", "fuite d'eau", "Fumée", "CO2"],
+				sensor_list: ["température", "fuite d'eau", "fumée", "CO2"],
 				number_bg: 1,
 	  			room_id:"4",
 			};
@@ -48,7 +48,7 @@ export default function BuildingBody({ props }: { props: BodyInterface }) {
 			const Card_1: RoomCardInterface = {
 				room_name: "Séjour",
 				nb_sensor: 4,
-				sensor_list: ["température", "fuite d'eau", "Fumée", "CO2"],
+				sensor_list: ["température", "fuite d'eau", "fumée", "CO2"],
 				number_bg: 1,
 	  			room_id:"6",
 			};
@@ -62,7 +62,7 @@ export default function BuildingBody({ props }: { props: BodyInterface }) {
 			const Card_3: RoomCardInterface = {
 				room_name: "Salle de Bain",
 				nb_sensor: 2,
-				sensor_list: ["température", "humidité"],
+				sensor_list: ["température", "humidité", "fuite d'eau"],
 				number_bg: 3,
 	  			room_id:"8",
 			};
@@ -99,9 +99,8 @@ export default function BuildingBody({ props }: { props: BodyInterface }) {
 			};
 			card_list = [Card_1, Card_2, Card_3, Card_4];
 		}
-		  
 		return card_list;
-	  }
+	}
 
 	let balise;
 	const card_list_for_this_building = cardListByBuilding();
